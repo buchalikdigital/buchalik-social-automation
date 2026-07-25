@@ -1,0 +1,14 @@
+{
+  "name": "buchalik-social-automation",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Renders Buchalik Digital post graphics and publishes the daily queue item to Instagram, Facebook and LinkedIn.",
+  "scripts": {
+    "render": "node scripts/render.mjs",
+    "publish": "node scripts/publish.mjs"
+  },
+  "dependencies": {
+    "playwright": "^1.48.0"
+  }
+}
