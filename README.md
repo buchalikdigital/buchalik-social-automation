@@ -42,13 +42,14 @@ Ich kann diese Schritte nicht für dich ausführen, weil sie deinen Login und de
 4. Deine Person-URN findest du z.B. über `GET https://api.linkedin.com/v2/me` mit dem Token — Format `urn:li:person:XXXXXXX`.
 5. Notiere: `LINKEDIN_ACCESS_TOKEN`, `LINKEDIN_PERSON_URN`.
 
-### 3. Repo auf GitHub + Secrets + Pages
+### 3. Repo, Pages, Secrets
 
-1. Neues **privates** GitHub-Repo erstellen (z.B. unter deinem `buchalikdigital`-Account), dieses lokale Verzeichnis dorthin pushen.
-2. **Settings → Pages**: Source = `Deploy from a branch`, Branch = `main`, Ordner = `/docs`. Danach ist die URL z.B. `https://buchalikdigital.github.io/buchalik-social-automation`.
-3. **Settings → Secrets and variables → Actions → Secrets**: `META_ACCESS_TOKEN`, `META_IG_USER_ID`, `META_PAGE_ID`, `LINKEDIN_ACCESS_TOKEN`, `LINKEDIN_PERSON_URN` eintragen.
-4. **Settings → Secrets and variables → Actions → Variables**: `PAGES_BASE_URL` = die Pages-URL aus Schritt 2.
-5. Unter **Actions** den Workflow **"Daily Social Post"** einmal manuell über **"Run workflow"** testen, bevor du dich auf den täglichen Cron verlässt.
+Bereits erledigt (2026-07-25): Repo liegt öffentlich unter [github.com/buchalikdigital/buchalik-social-automation](https://github.com/buchalikdigital/buchalik-social-automation), GitHub Pages läuft ab `main`/`docs` (`https://buchalikdigital.github.io/buchalik-social-automation`), die Actions-Variable `PAGES_BASE_URL` ist gesetzt. Öffentlich, weil GitHub Pages bei privaten Repos einen bezahlten Plan braucht — im Repo liegen keine Zugangsdaten, nur Render-Code und die ohnehin öffentlichen Post-Texte.
+
+Noch offen — sobald du die Tokens aus Schritt 1 und 2 hast:
+
+1. **Settings → Secrets and variables → Actions → Secrets** im Repo: `META_ACCESS_TOKEN`, `META_IG_USER_ID`, `META_PAGE_ID`, `LINKEDIN_ACCESS_TOKEN`, `LINKEDIN_PERSON_URN` eintragen.
+2. Unter **Actions** den Workflow **"Daily Social Post"** einmal manuell über **"Run workflow"** testen, bevor du dich auf den täglichen Cron verlässt.
 
 ## Neue Posts zur Warteschlange hinzufügen
 
