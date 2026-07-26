@@ -4,7 +4,7 @@ Rendert die Dark-Gold-Liquid-Glass-Postgrafik aus `queue/posts.json` und veröff
 
 ## Funktionsprinzip
 
-1. `queue/posts.json` enthält vorproduzierte, von dir freigegebene Posts (Headline fürs Bild + Captions pro Plattform).
+1. `queue/posts.json` enthält vorproduzierte, von dir freigegebene Posts (Bild-Variante + Bild-Inhalte + Captions pro Plattform).
 2. Jeden Tag (Cron in `.github/workflows/daily-post.yml`) nimmt sich die Automation den nächsten noch nicht komplett geposteten Eintrag.
 3. Rendert daraus zwei PNGs (Instagram 1080×1080, Facebook/LinkedIn 1200×630) via Playwright — dieselbe Technik, die wir schon manuell genutzt haben, nur jetzt scriptgesteuert.
 4. Committet die PNGs nach `docs/images/`, die GitHub Pages öffentlich ausliefert (Instagram/Facebook brauchen eine öffentliche Bild-URL).
@@ -15,10 +15,24 @@ Rendert die Dark-Gold-Liquid-Glass-Postgrafik aus `queue/posts.json` und veröff
 ```
 npm install
 npx playwright install chromium
-npm run render -- post-02-sauber-programmiert "Next.js 15, TypeScript.<br><em>Kein Baukasten-Code.</em>"
+npm run render                       # rendert alle Queue-Einträge
+npm run render -- post-03-abo-statt-einmalpreis   # nur einen
 ```
 
 Ergebnis landet in `docs/images/`. Damit lässt sich das Design prüfen, bevor überhaupt Zugangsdaten existieren.
+
+## Bild-Varianten
+
+Jeder Queue-Eintrag wählt über `variant` sein Layout; `fields` füllt dessen `{{PLATZHALTER}}`. Die Layouts liegen unter `templates/<variant>/{ig,fb}.html`, gemeinsame Markenwerte (Gold, Gradient, Glass-Effekt, Schriften) stehen zentral in `templates/_base.css`.
+
+| Variante | Wofür | Felder |
+| --- | --- | --- |
+| `headline` | Eine Aussage, groß gesetzt — der Standard | `HEADLINE` |
+| `vergleich` | Zwei Positionen gegenüberstellen, z.B. Preismodelle | `EYEBROW`, `LEFT_LABEL`, `LEFT_PRICE`, `LEFT_META`, `RIGHT_LABEL`, `RIGHT_PRICE`, `RIGHT_META` |
+
+Bei `vergleich` bekommt das rechte Panel den Gold-Akzent, das linke bleibt gedämpft — die Hierarchie transportiert die Aussage also auch ohne Caption. Felder dürfen HTML enthalten (`<br>`, `<em>`, `<span class="per">` für die Einheit hinter einem Preis).
+
+Eine neue Variante anlegen: Ordner unter `templates/` erstellen, `ig.html` (1080×1080) und `fb.html` (1200×630) hineinlegen, beide mit `{{BASE_CSS}}` am Anfang des `<style>`-Blocks.
 
 ## Setup — was du selbst erledigen musst
 

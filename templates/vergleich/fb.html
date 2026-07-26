@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+{{BASE_CSS}}
+
+.canvas { width: 1200px; height: 630px; }
+
+.bokeh-a { width: 480px; height: 480px; top: -200px; right: -100px; background: radial-gradient(circle, rgba(232,200,117,0.30), transparent 70%); filter: blur(65px); }
+.bokeh-b { width: 380px; height: 380px; bottom: -180px; left: -100px; background: radial-gradient(circle, rgba(200,169,110,0.22), transparent 70%); filter: blur(60px); }
+
+/* 630px is too short to stack, so the two panels sit side by side here.
+   The block is centred as a whole and the panels size to their content —
+   stretching them to full height would leave the text swimming. */
+.stack {
+  position: absolute; left: 78px; right: 78px; top: 0; bottom: 104px;
+  display: flex; flex-direction: column; justify-content: center; gap: 24px;
+}
+
+.eyebrow {
+  margin: 0;
+  font: 600 13px/1 'Inter', sans-serif;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  color: rgba(232,200,117,0.7);
+}
+
+.columns { display: flex; gap: 30px; align-items: stretch; }
+.row { flex: 1; display: flex; flex-direction: column; gap: 12px; }
+.row-label {
+  font: 600 14px/1 'Inter', sans-serif;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: rgba(250,248,243,0.5);
+}
+.row-label.gold { color: #E8C875; }
+
+.glass-panel {
+  flex: 1; border-radius: 20px; padding: 42px 38px;
+  display: flex; flex-direction: column; justify-content: center;
+}
+
+.glass-panel.muted {
+  background: linear-gradient(155deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+  border-color: rgba(245,237,216,0.14);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.30), inset 0 1px 0 rgba(255,255,255,0.05);
+}
+.glass-panel.muted::before { background: linear-gradient(90deg, transparent, rgba(245,237,216,0.18), transparent); }
+
+.price {
+  margin: 0 0 12px;
+  font-family: 'Playfair Display', serif; font-weight: 700;
+  line-height: 1.05;
+  font-variant-numeric: tabular-nums;
+}
+.glass-panel.muted .price { font-size: 40px; color: rgba(250,248,243,0.62); }
+.glass-panel.accent .price { font-size: 50px; color: #E8C875; }
+.price .per {
+  font-family: 'Inter', sans-serif; font-weight: 600;
+  font-size: 0.36em; letter-spacing: 0.06em;
+  color: rgba(250,248,243,0.66);
+}
+
+.meta {
+  margin: 0;
+  font: 400 16px/1.5 'Inter', sans-serif;
+  color: rgba(250,248,243,0.62);
+}
+.glass-panel.accent .meta { color: rgba(250,248,243,0.78); }
+
+.footer-mark { left: 0; right: 0; bottom: 44px; }
+.footer-mark .wordmark { font-size: 16px; letter-spacing: 0.22em; }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="bokeh bokeh-a"></div>
+  <div class="bokeh bokeh-b"></div>
+
+  <div class="stack">
+    <p class="eyebrow">{{EYEBROW}}</p>
+
+    <div class="columns">
+      <div class="row">
+        <span class="row-label">{{LEFT_LABEL}}</span>
+        <div class="glass-panel muted">
+          <p class="price">{{LEFT_PRICE}}</p>
+          <p class="meta">{{LEFT_META}}</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <span class="row-label gold">{{RIGHT_LABEL}}</span>
+        <div class="glass-panel accent">
+          <p class="price">{{RIGHT_PRICE}}</p>
+          <p class="meta">{{RIGHT_META}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-mark">
+    <span class="rule"></span>
+    <span class="wordmark">Buchalik Digital</span>
+    <span class="url">buchalik-websites.com</span>
+  </div>
+</div>
+</body>
+</html>

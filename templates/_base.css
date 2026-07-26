@@ -1,0 +1,71 @@
+/* Shared brand tokens for every post graphic.
+   Injected into each template via {{BASE_CSS}} so colours, fonts and the
+   glass treatment live in one place instead of drifting across templates.
+   Templates override layout (size, position) after this block — equal
+   specificity, so source order decides and the template always wins. */
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 700;
+  src: url(data:font/ttf;base64,{{PLAYFAIR_700}}) format('truetype');
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 600;
+  src: url(data:font/ttf;base64,{{PLAYFAIR_ITALIC_600}}) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  src: url(data:font/ttf;base64,{{INTER_600}}) format('truetype');
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+.canvas {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 82% 8%, rgba(232,200,117,0.16), transparent 42%),
+    linear-gradient(165deg, #211D15, #131009);
+  font-family: 'Inter', sans-serif;
+}
+
+.bokeh { position: absolute; border-radius: 50%; pointer-events: none; }
+
+/* Positioned (not absolute) so the panel also works inside flex layouts;
+   templates that place it by coordinates switch it to absolute themselves. */
+.glass-panel {
+  position: relative;
+  background: linear-gradient(155deg, rgba(255,255,255,0.09), rgba(232,200,117,0.05) 55%, rgba(255,255,255,0.02));
+  -webkit-backdrop-filter: blur(28px) saturate(1.4);
+  backdrop-filter: blur(28px) saturate(1.4);
+  border: 1px solid rgba(232,200,117,0.32);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.40), inset 0 1px 0 rgba(255,255,255,0.08), inset 0 0 70px rgba(232,200,117,0.05);
+}
+.glass-panel::before {
+  content: "";
+  position: absolute; top: 0; left: 12%; right: 12%; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(232,200,117,0.65), transparent);
+}
+
+.footer-mark {
+  position: absolute;
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+}
+.footer-mark .rule {
+  width: 46px; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(232,200,117,0.7), transparent);
+}
+.footer-mark .wordmark {
+  font: 600 19px/1 'Inter', sans-serif;
+  letter-spacing: 0.30em; text-transform: uppercase; color: #E8C875;
+}
+.footer-mark .url {
+  font: 400 14px/1 'Inter', sans-serif;
+  letter-spacing: 0.04em; color: rgba(245,237,216,0.62);
+}

@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+{{BASE_CSS}}
+
+.canvas { width: 1080px; height: 1080px; }
+
+.bokeh-a { width: 560px; height: 560px; top: -180px; right: -160px; background: radial-gradient(circle, rgba(232,200,117,0.32), transparent 70%); filter: blur(70px); }
+.bokeh-b { width: 420px; height: 420px; bottom: 40px; left: -140px; background: radial-gradient(circle, rgba(200,169,110,0.22), transparent 70%); filter: blur(65px); }
+.bokeh-c { width: 220px; height: 220px; top: 46%; right: 6%; background: radial-gradient(circle, rgba(245,237,216,0.10), transparent 70%); filter: blur(45px); }
+
+.glass-panel {
+  position: absolute;
+  left: 100px; right: 100px; top: 260px; bottom: 260px; border-radius: 26px; padding: 0 60px;
+  display: flex; flex-direction: column; justify-content: center;
+}
+
+.headline {
+  margin: 0; color: #FAF8F3;
+  font-family: 'Playfair Display', serif; font-weight: 700;
+  font-size: 56px; line-height: 1.2;
+  text-wrap: balance;
+}
+.headline em { font-style: italic; font-weight: 600; color: #E8C875; }
+
+.footer-mark { left: 0; right: 0; bottom: 80px; }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="bokeh bokeh-a"></div>
+  <div class="bokeh bokeh-b"></div>
+  <div class="bokeh bokeh-c"></div>
+  <div class="glass-panel">
+    <p class="headline">{{HEADLINE}}</p>
+  </div>
+  <div class="footer-mark">
+    <span class="rule"></span>
+    <span class="wordmark">Buchalik Digital</span>
+    <span class="url">buchalik-websites.com</span>
+  </div>
+</div>
+</body>
+</html>

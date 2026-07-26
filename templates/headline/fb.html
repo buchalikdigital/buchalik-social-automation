@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+{{BASE_CSS}}
+
+.canvas { width: 1200px; height: 630px; }
+
+.bokeh-a { width: 480px; height: 480px; top: -200px; right: -100px; background: radial-gradient(circle, rgba(232,200,117,0.30), transparent 70%); filter: blur(65px); }
+.bokeh-b { width: 380px; height: 380px; bottom: -160px; left: -100px; background: radial-gradient(circle, rgba(200,169,110,0.22), transparent 70%); filter: blur(60px); }
+
+.glass-panel {
+  position: absolute;
+  left: 110px; right: 340px; top: 115px; bottom: 115px; border-radius: 22px; padding: 0 52px;
+  display: flex; align-items: center;
+}
+
+.headline {
+  margin: 0; color: #FAF8F3;
+  font-family: 'Playfair Display', serif; font-weight: 700;
+  font-size: 46px; line-height: 1.2;
+  text-wrap: balance;
+}
+.headline em { font-style: italic; font-weight: 600; color: #E8C875; }
+
+/* Footer sits vertically down the right edge here, so the rule turns upright. */
+.footer-mark {
+  right: 96px; top: 0; bottom: 0; width: 200px;
+  justify-content: center; align-items: flex-start;
+}
+.footer-mark .rule {
+  width: 1px; height: 46px;
+  background: linear-gradient(180deg, transparent, rgba(232,200,117,0.7), transparent);
+}
+.footer-mark .wordmark { font-size: 16px; letter-spacing: 0.22em; text-align: left; }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="bokeh bokeh-a"></div>
+  <div class="bokeh bokeh-b"></div>
+  <div class="glass-panel">
+    <p class="headline">{{HEADLINE}}</p>
+  </div>
+  <div class="footer-mark">
+    <span class="rule"></span>
+    <span class="wordmark">Buchalik<br>Digital</span>
+    <span class="url">buchalik-<br>websites.com</span>
+  </div>
+</div>
+</body>
+</html>

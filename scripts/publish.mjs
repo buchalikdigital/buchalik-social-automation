@@ -28,7 +28,12 @@ async function main() {
 
   // 1. Render both graphics.
   const outDir = path.join(ROOT, 'docs/images');
-  const rendered = await renderPost({ headlineHtml: item.headlineHtml, slug: item.id, outDir });
+  const rendered = await renderPost({
+    variant: item.variant,
+    fields: item.fields,
+    slug: item.id,
+    outDir,
+  });
 
   // 2. Publish the rendered images so Instagram/Facebook can fetch them by URL.
   if (!PAGES_BASE_URL) {

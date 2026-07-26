@@ -2,12 +2,14 @@ import { chromium } from 'playwright';
 import { readFile, mkdir } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import { loadQueue } from './lib/queue.mjs';
 
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 
+// Each format is rendered from templates/<variant>/<format>.html.
 const FORMATS = {
-  ig: { template: 'templates/ig.html', width: 1080, height: 1080 },
-  fb: { template: 'templates/fb.html', width: 1200, height: 630 },
+  ig: { width: 1080, height: 1080 },
+  fb: { width: 1200, height: 630 },
 };
 
 async function loadFontsB64() {
@@ -33,12 +35,17 @@ function fillTemplate(template, values) {
 }
 
 /**
- * Renders one queue item's headline into both the Instagram (1080x1080) and
+ * Renders one queue item into both the Instagram (1080x1080) and
  * Facebook/LinkedIn (1200x630) dark-gold-liquid-glass graphic, at 2x pixel
- * density for crisp export. Returns { ig: absPath, fb: absPath }.
+ * density for crisp export.
+ *
+ * `variant` picks the layout under templates/ (e.g. "headline", "vergleich"),
+ * `fields` supplies that layout's {{PLACEHOLDER}} values.
+ * Returns { ig: absPath, fb: absPath }.
  */
-export async function renderPost({ headlineHtml, slug, outDir }) {
+export async function renderPost({ variant = 'headline', fields = {}, slug, outDir }) {
   const fonts = await loadFontsB64();
+  const baseCss = await readFile(path.join(ROOT, 'templates/_base.css'), 'utf8');
   await mkdir(outDir, { recursive: true });
 
   const browser = await chromium.launch();
@@ -46,8 +53,13 @@ export async function renderPost({ headlineHtml, slug, outDir }) {
 
   try {
     for (const [key, format] of Object.entries(FORMATS)) {
-      const rawTemplate = await readFile(path.join(ROOT, format.template), 'utf8');
-      const html = fillTemplate(rawTemplate, { ...fonts, HEADLINE: headlineHtml });
+      const templatePath = path.join(ROOT, 'templates', variant, `${key}.html`);
+      const rawTemplate = await readFile(templatePath, 'utf8');
+
+      // Two passes: the shared stylesheet goes in first because it carries
+      // font placeholders of its own, which the second pass then resolves.
+      const withBase = fillTemplate(rawTemplate, { BASE_CSS: baseCss });
+      const html = fillTemplate(withBase, { ...fonts, ...fields });
 
       const page = await browser.newPage({
         viewport: { width: format.width, height: format.height },
@@ -68,16 +80,29 @@ export async function renderPost({ headlineHtml, slug, outDir }) {
   return results;
 }
 
-// Allow running directly: node scripts/render.mjs <slug> "<headlineHtml>"
+// Allow running directly to preview graphics without publishing anything:
+//   node scripts/render.mjs             → renders every queue item
+//   node scripts/render.mjs <post-id>   → renders just that one
 // (Compared via pathToFileURL, not a raw string template, so this also works
 // on Windows where process.argv[1] uses backslashes.)
 if (import.meta.url === pathToFileURL(process.argv[1] ?? '').href) {
-  const [slug, headlineHtml] = process.argv.slice(2);
-  if (!slug || !headlineHtml) {
-    console.error('Usage: node scripts/render.mjs <slug> "<headlineHtml>"');
+  const wantedId = process.argv[2];
+  const queue = await loadQueue();
+  const items = wantedId ? queue.filter((item) => item.id === wantedId) : queue;
+
+  if (!items.length) {
+    console.error(`No queue item matches "${wantedId}". Available: ${queue.map((i) => i.id).join(', ')}`);
     process.exit(1);
   }
+
   const outDir = path.join(ROOT, 'docs/images');
-  const result = await renderPost({ headlineHtml, slug, outDir });
-  console.log('Rendered:', result);
+  for (const item of items) {
+    const result = await renderPost({
+      variant: item.variant,
+      fields: item.fields,
+      slug: item.id,
+      outDir,
+    });
+    console.log(`Rendered ${item.id} (${item.variant}):`, result);
+  }
 }
