@@ -11,7 +11,11 @@
       "RIGHT_PRICE": "199 € <span class=\"per\">/ Monat</span>",
       "RIGHT_META": "✓ Keine Einmalkosten<br>✓ Hosting, Pflege &amp; Updates inklusive<br>✓ Kostenloser Entwurf vorab<br>✓ In 1–2 Wochen live"
     },
-    "posted": { "instagram": false, "facebook": false, "linkedin": false },
+    "posted": {
+      "instagram": false,
+      "facebook": false,
+      "linkedin": true
+    },
     "captions": {
       "instagram": "3.000 € für eine Website. Vorab. Bevor man irgendwas gesehen hat.\n\nFür einen Handwerksbetrieb konkurriert das nicht mit anderen Websites – sondern mit einem Transporter, einer Maschine, drei Monaten Material.\n\nDeshalb ist die Website von so vielen Betrieben noch auf dem Stand von 2014.\n\nIch mache es anders: 199 € im Monat, keine Einmalkosten. Design, Hosting, Sicherheitsupdates und Änderungen sind drin.\n\nEhrlich: Über die Laufzeit ist das nicht billiger als ein Agenturpreis. Der Unterschied ist, dass Sie nichts vorab zahlen, in 1–2 Wochen online sind – und dass ich nur weiter verdiene, wenn Sie zufrieden bleiben.\n\nDer erste Entwurf ist kostenlos. Sie entscheiden erst danach.\n\n👉 Link in der Bio\n\n#handwerk #handwerksbetrieb #webdesign #dachdecker #elektriker #sanitärheizung #malerbetrieb #meisterbetrieb #selbstständig #pforzheim",
       "facebook": "Eine neue Website kostet bei einer Agentur schnell 3.000 bis 8.000 € – und zwar vorab, bevor Sie überhaupt etwas gesehen haben.\n\nFür einen Handwerksbetrieb konkurriert diese Summe nicht mit anderen Websites. Sie konkurriert mit einem Transporter, einer neuen Maschine oder drei Monaten Materialvorkasse. Und genau deshalb ist die Website vieler Betriebe noch auf dem Stand von vor zehn Jahren.\n\nBei mir gibt es deshalb keinen Projektpreis, sondern 199 € im Monat. Darin enthalten: individuelle Website, Hosting, SSL-Zertifikat, Sicherheitsupdates, monatliche Backups und laufende Änderungen – Sie müssen sich um nichts Technisches kümmern.\n\nGanz ehrlich gerechnet: Über die gesamte Laufzeit ist das nicht günstiger als ein einmaliger Agenturpreis. Der Unterschied ist, dass keine große Summe auf einmal fällig wird, dass Sie in 1–2 Wochen online sind und dass ich nur dann weiter verdiene, wenn Sie zufrieden bleiben.\n\nUnd bevor Sie sich entscheiden, bekommen Sie einen kostenlosen Design-Entwurf. Erst danach entscheiden Sie, ob Sie starten möchten.\n\nFragen? Einfach schreiben.\nbuchalik-websites.com",
@@ -24,7 +28,11 @@
     "fields": {
       "HEADLINE": "Ihr Betrieb verdient<br><em>keine Vorlage.</em>"
     },
-    "posted": { "instagram": true, "facebook": false, "linkedin": false },
+    "posted": {
+      "instagram": true,
+      "facebook": false,
+      "linkedin": false
+    },
     "captions": {
       "instagram": "11 Websites. 11 komplett unterschiedliche Designs. 0 Baukästen.\n\nBevor ich meinen ersten Kunden hatte, habe ich Demo-Websites für Dachdecker, Maler, Elektriker und Sanitärbetriebe gebaut – jede von Hand programmiert, jede anders.\n\nWarum? Weil „individuelle Website\" bei den meisten Agenturen heißt: dasselbe Grundgerüst, andere Farbe.\n\nBei mir heißt es: andere Struktur, andere Schrift, andere Technik – passend zum Betrieb.\n\n👉 Alle Projekte + Preise im Link in der Bio.\nWebsite im Abo, ab 199 €/Monat. Erster Monat -50%.\n\n#handwerk #handwerksbetrieb #webdesign #dachdecker #elektriker #sanitärheizung #malerbetrieb #webdevelopment #pforzheim",
       "facebook": "Bevor ich einen einzigen zahlenden Kunden hatte, habe ich 11 komplett unterschiedliche Websites gebaut – für Dachdecker, Maler, Elektriker und Sanitärbetriebe. Alles von Hand programmiert, keine davon aus einem Baukasten wie Wix oder Jimdo.\n\nWarum der Aufwand? Weil ich zeigen wollte, was ich meine, wenn ich sage: Ihr Betrieb bekommt eine Website, die zu Ihnen passt – nicht eine, die zufällig zu jedem passt.\n\nAlle Projekte können Sie sich hier live ansehen: buchalik-websites.com/projekte.html\n\nUnd falls Sie selbst einen Handwerksbetrieb führen und über eine neue Website nachdenken: Bei mir keine 3.000–8.000 € Einmalkosten wie bei klassischen Agenturen, sondern eine individuelle Premium-Website im Abo, ab 199 €/Monat – Design, Hosting und Pflege inklusive. Aktuell im ersten Monat 50 % reduziert.\n\nFragen? Einfach schreiben.",
@@ -37,7 +45,11 @@
     "fields": {
       "HEADLINE": "Next.js 15, TypeScript.<br><em>Kein Baukasten-Code.</em>"
     },
-    "posted": { "instagram": false, "facebook": false, "linkedin": false },
+    "posted": {
+      "instagram": false,
+      "facebook": false,
+      "linkedin": false
+    },
     "captions": {
       "instagram": "„Ihr Betrieb verdient keine Vorlage.\" – wie das technisch entsteht:\n\nKein Baukasten. Kein Plugin-Wirrwarr, das bei jedem Update bricht.\n\nIch baue jede Website mit Next.js 15, TypeScript und Tailwind – demselben technischen Fundament, auf dem auch große Tech-Produkte laufen. Sauber strukturiert, typsicher, ohne Altlasten.\n\nMan sieht das nicht auf den ersten Blick. Man merkt es an der Ladezeit – und daran, dass in einem Jahr noch alles läuft.\n\n#webdevelopment #nextjs #typescript #cleancode #handwerksbetrieb",
       "facebook": "„Ihr Betrieb verdient keine Vorlage.\" – wie das technisch entsteht:\n\nKein Baukasten. Kein Plugin-Wirrwarr, das bei jedem Update bricht.\n\nIch baue jede Website mit Next.js 15, TypeScript und Tailwind – demselben technischen Fundament, auf dem auch große Tech-Produkte laufen. Sauber strukturiert, typsicher, ohne Altlasten.\n\nMan sieht das nicht auf den ersten Blick. Man merkt es an der Ladezeit – und daran, dass in einem Jahr noch alles läuft.",
