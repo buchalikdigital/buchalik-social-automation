@@ -31,11 +31,11 @@
 }
 .row-label.gold { color: #E8C875; }
 
-/* Price and details sit side by side so the panel reads as one line of
-   information rather than a left-hugging block in a wide empty box. */
+/* Price sits above a short list — full width, so each panel can carry a
+   different number of lines (the two sides aren't symmetric on purpose). */
 .glass-panel {
-  border-radius: 24px; padding: 58px 50px;
-  display: flex; align-items: center; justify-content: space-between; gap: 44px;
+  border-radius: 24px; padding: 46px 50px;
+  display: flex; flex-direction: column; gap: 18px;
 }
 
 /* The agency panel stays deliberately quiet: no gold glow, dimmer border. */
@@ -52,20 +52,22 @@
   line-height: 1.05;
   font-variant-numeric: tabular-nums;
 }
-.glass-panel.muted .price { font-size: 58px; color: rgba(250,248,243,0.62); }
-.glass-panel.accent .price { font-size: 76px; color: #E8C875; }
+.glass-panel.muted .price { font-size: 50px; color: rgba(250,248,243,0.62); }
+.glass-panel.accent .price { font-size: 62px; color: #E8C875; }
 .price .per {
   font-family: 'Inter', sans-serif; font-weight: 600;
   font-size: 0.32em; letter-spacing: 0.06em;
   color: rgba(250,248,243,0.66);
 }
 
+/* Muted list stays quiet — a plain dash, no colour coding as "bad". */
 .meta {
-  margin: 0; text-align: right;
-  font: 400 21px/1.55 'Inter', sans-serif;
-  color: rgba(250,248,243,0.62);
+  margin: 0;
+  font: 400 19px/1.85 'Inter', sans-serif;
+  color: rgba(250,248,243,0.5);
 }
-.glass-panel.accent .meta { color: rgba(250,248,243,0.78); }
+/* Accent list gets the warmer read: gold-tinted, not just brighter white. */
+.glass-panel.accent .meta { color: rgba(238,214,161,0.92); }
 
 .footer-mark { left: 0; right: 0; bottom: 68px; }
 </style>

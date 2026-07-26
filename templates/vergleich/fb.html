@@ -35,8 +35,8 @@
 .row-label.gold { color: #E8C875; }
 
 .glass-panel {
-  flex: 1; border-radius: 20px; padding: 42px 38px;
-  display: flex; flex-direction: column; justify-content: center;
+  flex: 1; border-radius: 20px; padding: 30px 34px;
+  display: flex; flex-direction: column; justify-content: center; gap: 10px;
 }
 
 .glass-panel.muted {
@@ -47,25 +47,27 @@
 .glass-panel.muted::before { background: linear-gradient(90deg, transparent, rgba(245,237,216,0.18), transparent); }
 
 .price {
-  margin: 0 0 12px;
+  margin: 0;
   font-family: 'Playfair Display', serif; font-weight: 700;
   line-height: 1.05;
   font-variant-numeric: tabular-nums;
 }
-.glass-panel.muted .price { font-size: 40px; color: rgba(250,248,243,0.62); }
-.glass-panel.accent .price { font-size: 50px; color: #E8C875; }
+.glass-panel.muted .price { font-size: 34px; color: rgba(250,248,243,0.62); }
+.glass-panel.accent .price { font-size: 42px; color: #E8C875; }
 .price .per {
   font-family: 'Inter', sans-serif; font-weight: 600;
   font-size: 0.36em; letter-spacing: 0.06em;
   color: rgba(250,248,243,0.66);
 }
 
+/* Muted list stays quiet — a plain dash, no colour coding as "bad". */
 .meta {
   margin: 0;
-  font: 400 16px/1.5 'Inter', sans-serif;
-  color: rgba(250,248,243,0.62);
+  font: 400 14px/1.6 'Inter', sans-serif;
+  color: rgba(250,248,243,0.5);
 }
-.glass-panel.accent .meta { color: rgba(250,248,243,0.78); }
+/* Accent list gets the warmer read: gold-tinted, not just brighter white. */
+.glass-panel.accent .meta { color: rgba(238,214,161,0.92); }
 
 .footer-mark { left: 0; right: 0; bottom: 44px; }
 .footer-mark .wordmark { font-size: 16px; letter-spacing: 0.22em; }
