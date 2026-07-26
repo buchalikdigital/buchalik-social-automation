@@ -53,6 +53,47 @@ html, body { margin: 0; padding: 0; }
   background: linear-gradient(90deg, transparent, rgba(232,200,117,0.65), transparent);
 }
 
+/* ── Comparison panels ───────────────────────────────────────────────
+   The contrast is built from temperature and light, not from marking the
+   other option as an error: the quiet side is desaturated to a cold grey
+   (saturate < 1 drains the warm ground showing through the glass), the
+   Buchalik side is oversaturated, gold-tinted and lit from within.
+   No red, no warning semantics — just recessive versus present. */
+
+.glass-panel.muted {
+  background: linear-gradient(160deg, rgba(158,170,188,0.06), rgba(120,132,150,0.02));
+  border-color: rgba(198,210,226,0.10);
+  -webkit-backdrop-filter: blur(28px) saturate(0.35);
+  backdrop-filter: blur(28px) saturate(0.35);
+  box-shadow: 0 14px 34px rgba(0,0,0,0.34), inset 0 1px 0 rgba(255,255,255,0.03);
+}
+.glass-panel.muted::before {
+  background: linear-gradient(90deg, transparent, rgba(206,218,234,0.14), transparent);
+}
+
+.glass-panel.accent {
+  background: linear-gradient(155deg, rgba(232,200,117,0.13), rgba(232,200,117,0.04) 58%, rgba(255,255,255,0.025));
+  border-color: rgba(232,200,117,0.60);
+  -webkit-backdrop-filter: blur(28px) saturate(1.45);
+  backdrop-filter: blur(28px) saturate(1.45);
+  box-shadow:
+    0 26px 64px rgba(0,0,0,0.42),
+    0 0 78px rgba(232,200,117,0.16),
+    inset 0 1px 0 rgba(255,255,255,0.13),
+    inset 0 0 60px rgba(232,200,117,0.05);
+}
+.glass-panel.accent::before {
+  background: linear-gradient(90deg, transparent, rgba(246,226,162,0.95), transparent);
+}
+
+/* Type colours follow the same cold/warm split; sizes stay per template. */
+.row-label { color: rgba(203,214,230,0.42); }
+.row-label.gold { color: #E8C875; }
+.glass-panel.muted .price { color: rgba(210,219,232,0.5); }
+.glass-panel.accent .price { color: #F0D389; }
+.glass-panel.muted .meta { color: rgba(203,214,230,0.4); }
+.glass-panel.accent .meta { color: rgba(244,226,175,0.95); }
+
 .footer-mark {
   position: absolute;
   display: flex; flex-direction: column; align-items: center; gap: 10px;
