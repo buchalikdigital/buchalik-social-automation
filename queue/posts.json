@@ -8,7 +8,11 @@
       "STAT_LABEL": "mehr Anfragen",
       "SUBLINE": "Konversionsorientierte Websites schlagen klassische Internetauftritte – Analyse von über <strong>850.000 Websites</strong>."
     },
-    "posted": { "instagram": false, "facebook": false, "linkedin": false },
+    "posted": {
+      "instagram": false,
+      "facebook": false,
+      "linkedin": true
+    },
     "captions": {
       "instagram": "+20 % mehr Anfragen. Nicht meine Zahl – eine Studie der Golden Gate University, Analyse von über 850.000 Websites.\n\nDer Unterschied liegt selten am Logo oder an der Farbe. Er liegt in der Struktur: klare Handlungsaufforderung, schnelle Ladezeit, für Handy gebaut statt nur „auch auf dem Handy sichtbar\".\n\nGenau darauf achte ich bei jeder Website, die ich baue.\n\n#handwerk #handwerksbetrieb #webdesign #conversion #dachdecker #elektriker #sanitärheizung #malerbetrieb #pforzheim",
       "facebook": "Eine Studie der Golden Gate University hat über 850.000 Websites analysiert: Konversionsorientierte Websites erzielen bis zu 20 % mehr Anfragen als klassische Internetauftritte.\n\nDer Unterschied liegt selten am Logo oder an der Farbe. Er liegt an der Struktur – eine klare Handlungsaufforderung, kurze Ladezeiten, eine Seite, die für das Handy gebaut ist und nicht nur „auch auf dem Handy funktioniert\".\n\nGenau darauf achte ich bei jeder Website, die ich für Handwerksbetriebe baue: nicht nur schön, sondern so aufgebaut, dass aus Besuchern Anfragen werden.\n\nFragen zu Ihrer aktuellen Website? Einfach schreiben.\nbuchalik-websites.com",
