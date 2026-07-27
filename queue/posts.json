@@ -1,5 +1,21 @@
 [
   {
+    "id": "post-04-plus-20-prozent",
+    "variant": "stat",
+    "fields": {
+      "EYEBROW": "Studie · Golden Gate University",
+      "STAT": "+20%",
+      "STAT_LABEL": "mehr Anfragen",
+      "SUBLINE": "Konversionsorientierte Websites schlagen klassische Internetauftritte – Analyse von über <strong>850.000 Websites</strong>."
+    },
+    "posted": { "instagram": false, "facebook": false, "linkedin": false },
+    "captions": {
+      "instagram": "+20 % mehr Anfragen. Nicht meine Zahl – eine Studie der Golden Gate University, Analyse von über 850.000 Websites.\n\nDer Unterschied liegt selten am Logo oder an der Farbe. Er liegt in der Struktur: klare Handlungsaufforderung, schnelle Ladezeit, für Handy gebaut statt nur „auch auf dem Handy sichtbar\".\n\nGenau darauf achte ich bei jeder Website, die ich baue.\n\n#handwerk #handwerksbetrieb #webdesign #conversion #dachdecker #elektriker #sanitärheizung #malerbetrieb #pforzheim",
+      "facebook": "Eine Studie der Golden Gate University hat über 850.000 Websites analysiert: Konversionsorientierte Websites erzielen bis zu 20 % mehr Anfragen als klassische Internetauftritte.\n\nDer Unterschied liegt selten am Logo oder an der Farbe. Er liegt an der Struktur – eine klare Handlungsaufforderung, kurze Ladezeiten, eine Seite, die für das Handy gebaut ist und nicht nur „auch auf dem Handy funktioniert\".\n\nGenau darauf achte ich bei jeder Website, die ich für Handwerksbetriebe baue: nicht nur schön, sondern so aufgebaut, dass aus Besuchern Anfragen werden.\n\nFragen zu Ihrer aktuellen Website? Einfach schreiben.\nbuchalik-websites.com",
+      "linkedin": "Eine Studie der Golden Gate University hat über 850.000 Websites analysiert. Ergebnis: Konversionsorientierte Websites erzielen bis zu 20 % mehr Anfragen als klassische Internetauftritte.\n\nDie meisten Handwerksbetriebe haben eine Website, die aussieht wie eine digitale Visitenkarte – Logo, ein paar Fotos, eine Telefonnummer. Technisch funktioniert das. Konvertieren tut es selten.\n\nDer Unterschied zwischen einer Visitenkarte und einer Website, die tatsächlich Anfragen bringt, liegt selten im Design allein. Er liegt in der Struktur: eine klare Handlungsaufforderung an der richtigen Stelle, Ladezeiten unter zwei Sekunden, eine Seite, die für das Handy entworfen ist – nicht nachträglich dafür angepasst.\n\nGenau das ist der Unterschied, den ich beim Bauen jeder Website mitdenke. Nicht nur, dass sie gut aussieht. Sondern dass sie arbeitet.\n\nbuchalik-websites.com"
+    }
+  },
+  {
     "id": "post-03-abo-statt-einmalpreis",
     "variant": "vergleich",
     "fields": {

@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+{{BASE_CSS}}
+
+.canvas { width: 1080px; height: 1080px; }
+
+.bokeh-a { width: 780px; height: 780px; top: -220px; left: 50%; transform: translateX(-50%); background: radial-gradient(circle, rgba(232,200,117,0.30), transparent 68%); filter: blur(90px); }
+.bokeh-b { width: 520px; height: 520px; bottom: -200px; right: -140px; background: radial-gradient(circle, rgba(200,169,110,0.16), transparent 70%); filter: blur(80px); }
+
+.content {
+  position: absolute; left: 90px; right: 90px; top: 0; bottom: 148px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 26px;
+  font: 600 15px/1 'Inter', sans-serif;
+  letter-spacing: 0.32em; text-transform: uppercase;
+  color: rgba(232,200,117,0.75);
+}
+
+/* The number carries the whole post — gradient fill plus a soft glow behind
+   it (via text-shadow, since filter:blur on the text itself would blur the
+   glyphs). No panel, no border: the number is the only object in the frame. */
+.stat {
+  margin: 0; line-height: 0.92;
+  font-family: 'Playfair Display', serif; font-weight: 700;
+  font-size: 320px;
+  font-variant-numeric: tabular-nums;
+  background: linear-gradient(155deg, #F6E2A2 0%, #E8C875 45%, #C8A96E 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  text-shadow: 0 0 90px rgba(232,200,117,0.55), 0 0 200px rgba(232,200,117,0.30);
+  filter: drop-shadow(0 18px 40px rgba(0,0,0,0.45));
+}
+
+.stat-label {
+  margin: 22px 0 0;
+  font-family: 'Playfair Display', serif; font-style: italic; font-weight: 600;
+  font-size: 42px; color: #FAF8F3;
+}
+
+.subline {
+  margin: 30px 0 0; max-width: 640px;
+  font: 400 20px/1.6 'Inter', sans-serif;
+  color: rgba(250,248,243,0.62);
+}
+.subline strong { color: rgba(250,248,243,0.85); font-weight: 600; }
+
+.footer-mark { left: 0; right: 0; bottom: 76px; }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="bokeh bokeh-a"></div>
+  <div class="bokeh bokeh-b"></div>
+
+  <div class="content">
+    <p class="eyebrow">{{EYEBROW}}</p>
+    <p class="stat">{{STAT}}</p>
+    <p class="stat-label">{{STAT_LABEL}}</p>
+    <p class="subline">{{SUBLINE}}</p>
+  </div>
+
+  <div class="footer-mark">
+    <span class="rule"></span>
+    <span class="wordmark">Buchalik Digital</span>
+    <span class="url">buchalik-websites.com</span>
+  </div>
+</div>
+</body>
+</html>
