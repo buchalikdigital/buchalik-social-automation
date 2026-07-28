@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+{{FONTS_CSS}}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+.canvas {
+  position: relative; overflow: hidden;
+  width: 1200px; height: 630px;
+  background: #14120e;
+  font-family: 'Inter', sans-serif;
+}
+
+.photo {
+  position: absolute; inset: 0;
+  background-image: url({{PHOTO_DATA_URI}});
+  background-size: cover;
+  background-position: {{PHOTO_POSITION}};
+}
+
+/* Landscape scrims from the left instead of the bottom — there isn't enough
+   vertical room here for a bottom text band without cropping the photo
+   into a sliver. */
+.scrim {
+  position: absolute; inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(8,7,5,0.90) 0%,
+    rgba(8,7,5,0.66) 30%,
+    rgba(8,7,5,0.22) 52%,
+    transparent 68%
+  );
+}
+
+.eyebrow {
+  position: absolute; left: 78px; top: 150px; margin: 0;
+  font: 600 13px/1 'Inter', sans-serif;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  color: rgba(232,200,117,0.82);
+}
+
+.headline {
+  position: absolute; left: 78px; top: 192px; width: 560px; margin: 0;
+  font-family: 'Playfair Display', serif; font-weight: 700;
+  font-size: 42px; line-height: 1.24;
+  color: #FAF8F3;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+.headline em { font-style: italic; font-weight: 600; color: #E8C875; }
+
+.footer-mark {
+  position: absolute; left: 78px; bottom: 46px;
+  display: flex; align-items: center; gap: 20px;
+}
+.footer-mark .wordmark {
+  font: 600 15px/1 'Inter', sans-serif;
+  letter-spacing: 0.26em; text-transform: uppercase;
+  color: rgba(250,248,243,0.88);
+}
+.footer-mark .url {
+  font: 400 14px/1 'Inter', sans-serif;
+  letter-spacing: 0.03em;
+  color: rgba(250,248,243,0.5);
+}
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="photo"></div>
+  <div class="scrim"></div>
+  <p class="eyebrow">{{EYEBROW}}</p>
+  <p class="headline">{{HEADLINE}}</p>
+  <div class="footer-mark">
+    <span class="wordmark">Buchalik Digital</span>
+    <span class="url">buchalik-websites.com</span>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+{{FONTS_CSS}}
+
+/* Real photography instead of the drawn dark-gold canvas — deliberately a
+   third visual world (after the glass-panel brand look and the cold "nacht"
+   scene). The gradient scrim exists only for text legibility, not styling;
+   the photo itself carries the emotional weight. */
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+.canvas {
+  position: relative; overflow: hidden;
+  width: 1080px; height: 1080px;
+  background: #14120e;
+  font-family: 'Inter', sans-serif;
+}
+
+.photo {
+  position: absolute; inset: 0;
+  background-image: url({{PHOTO_DATA_URI}});
+  background-size: cover;
+  background-position: {{PHOTO_POSITION}};
+}
+
+/* Scrim: near-black at the bottom for the text block, clear at the top so
+   the photo still reads as a photo, not just a dark rectangle. */
+.scrim {
+  position: absolute; inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(8,7,5,0.92) 0%,
+    rgba(8,7,5,0.72) 22%,
+    rgba(8,7,5,0.32) 44%,
+    rgba(8,7,5,0.02) 62%,
+    transparent 75%
+  );
+}
+
+.eyebrow {
+  position: absolute; left: 84px; bottom: 372px; margin: 0;
+  font: 600 15px/1 'Inter', sans-serif;
+  letter-spacing: 0.32em; text-transform: uppercase;
+  color: rgba(232,200,117,0.82);
+  text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+}
+
+.headline {
+  position: absolute; left: 84px; right: 84px; bottom: 168px; margin: 0;
+  font-family: 'Playfair Display', serif; font-weight: 700;
+  font-size: 58px; line-height: 1.2;
+  color: #FAF8F3;
+  text-shadow: 0 4px 24px rgba(0,0,0,0.55);
+}
+.headline em { font-style: italic; font-weight: 600; color: #E8C875; }
+
+.footer-mark {
+  position: absolute; left: 84px; right: 84px; bottom: 76px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.footer-mark .wordmark {
+  font: 600 17px/1 'Inter', sans-serif;
+  letter-spacing: 0.28em; text-transform: uppercase;
+  color: rgba(250,248,243,0.88);
+}
+.footer-mark .url {
+  font: 400 15px/1 'Inter', sans-serif;
+  letter-spacing: 0.03em;
+  color: rgba(250,248,243,0.5);
+}
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="photo"></div>
+  <div class="scrim"></div>
+  <p class="eyebrow">{{EYEBROW}}</p>
+  <p class="headline">{{HEADLINE}}</p>
+  <div class="footer-mark">
+    <span class="wordmark">Buchalik Digital</span>
+    <span class="url">buchalik-websites.com</span>
+  </div>
+</div>
+</body>
+</html>

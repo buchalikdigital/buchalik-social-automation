@@ -32,7 +32,15 @@ Jeder Queue-Eintrag wählt über `variant` sein Layout; `fields` füllt dessen `
 
 Bei `vergleich` bekommt das rechte Panel den Gold-Akzent, das linke bleibt gedämpft — die Hierarchie transportiert die Aussage also auch ohne Caption. Felder dürfen HTML enthalten (`<br>`, `<em>`, `<span class="per">` für die Einheit hinter einem Preis).
 
-Eine neue Variante anlegen: Ordner unter `templates/` erstellen, `ig.html` (1080×1080) und `fb.html` (1200×630) hineinlegen, beide mit `{{BASE_CSS}}` am Anfang des `<style>`-Blocks.
+Eine neue Variante anlegen: Ordner unter `templates/` erstellen, `ig.html` (1080×1080) und `fb.html` (1200×630) hineinlegen, beide mit `{{FONTS_CSS}}` + `{{BASE_CSS}}` (oder nur `{{FONTS_CSS}}`, falls die Variante bewusst nicht die Dark-Gold-Optik nutzt, wie `nacht` und `foto`) am Anfang des `<style>`-Blocks.
+
+Varianten mit echtem Foto-Hintergrund (`foto`) brauchen zusätzlich ein `photo`-Feld im Queue-Eintrag — Pfad relativ zum Repo-Root, z.B. `assets/photos/post-06-baustelle.jpg`. `render.mjs` liest die Datei, kodiert sie als Data-URI und stellt sie im Template als `{{PHOTO_DATA_URI}}` bereit.
+
+### Foto-Lizenzen
+
+| Datei | Quelle | Fotograf | Lizenz |
+| --- | --- | --- | --- |
+| `assets/photos/post-06-baustelle.jpg` | [Pexels](https://www.pexels.com) | James Frid | Pexels-Lizenz — kommerzielle Nutzung erlaubt, keine Attribution verpflichtend |
 
 ## Setup — was du selbst erledigen musst
 

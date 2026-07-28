@@ -31,6 +31,7 @@ async function main() {
   const rendered = await renderPost({
     variant: item.variant,
     fields: item.fields,
+    photo: item.photo,
     slug: item.id,
     outDir,
   });

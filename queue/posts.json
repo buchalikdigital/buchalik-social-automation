@@ -1,5 +1,21 @@
 [
   {
+    "id": "post-06-echte-arbeit",
+    "variant": "foto",
+    "photo": "assets/photos/post-06-baustelle.jpg",
+    "fields": {
+      "EYEBROW": "Ihr Alltag",
+      "HEADLINE": "Das ist echte Arbeit.<br><em>Zeigt das Ihre Website auch?</em>",
+      "PHOTO_POSITION": "center 68%"
+    },
+    "posted": { "instagram": false, "facebook": false, "linkedin": false },
+    "captions": {
+      "instagram": "Helm auf, Weste an, konzentriert auf der Baustelle – das ist der Alltag, für den Sie gelernt haben.\n\nUnd dann kommt der Kunde auf Ihre Website und sieht: ein Stockfoto-Lächeln, eine Vorlage, die tausend andere auch benutzen.\n\nDas passt nicht zusammen. Ihre Arbeit ist echt – Ihre Website sollte es auch sein.\n\nKein Baukasten. Individuell gebaut, wie jeder Auftrag, den Sie annehmen.\n\n#handwerk #handwerksbetrieb #baustelle #dachdecker #elektriker #sanitärheizung #malerbetrieb #pforzheim",
+      "facebook": "Helm auf, Weste an, konzentriert bei der Arbeit – das ist der Alltag, für den Sie gelernt haben und den Sie jeden Tag leisten.\n\nUnd dann kommt ein potenzieller Kunde auf Ihre Website und sieht: eine Vorlage, die tausend andere Betriebe genauso benutzen. Stockfotos, die nichts mit Ihrer echten Arbeit zu tun haben.\n\nDas passt nicht zusammen. Wenn die Arbeit echt ist, sollte die Website es auch sein.\n\nGenau deshalb baue ich keine Vorlagen, sondern jede Website einzeln – passend zum Betrieb, der dahintersteht.\n\nbuchalik-websites.com",
+      "linkedin": "Helm auf, Weste an, konzentriert bei der Arbeit. Das ist der Alltag von Handwerksbetrieben – echt, konkret, oft anstrengend.\n\nUnd dann öffnet ein potenzieller Kunde die Website desselben Betriebs und sieht: eine Vorlage. Dasselbe Layout wie bei tausend anderen, ein Stockfoto-Lächeln, das nichts mit der echten Arbeit zu tun hat.\n\nDieser Bruch zwischen echter Arbeit und generischer Außendarstellung ist einer der Gründe, warum ich keine Baukasten-Websites baue. Wenn ein Betrieb seit Generationen ein Handwerk beherrscht, verdient er keine Website, die wie die des Wettbewerbers nebenan aussieht.\n\nJede Website, die ich baue, ist individuell entwickelt – für den Betrieb, der dahintersteht, nicht für eine Vorlage, die zufällig passt.\n\nbuchalik-websites.com"
+    }
+  },
+  {
     "id": "post-05-nachts-um-drei",
     "variant": "nacht",
     "fields": {

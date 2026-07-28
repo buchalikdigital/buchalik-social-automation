@@ -38,6 +38,17 @@ function fillTemplate(template, values) {
   return out;
 }
 
+const IMAGE_MIME_BY_EXT = { '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.png': 'image/png', '.webp': 'image/webp' };
+
+/** Reads a photo (path relative to repo root) into a ready-to-use data: URI. */
+async function loadPhotoDataUri(relativePath) {
+  const ext = path.extname(relativePath).toLowerCase();
+  const mime = IMAGE_MIME_BY_EXT[ext];
+  if (!mime) throw new Error(`Unsupported photo type "${ext}" for ${relativePath} (use .jpg, .png or .webp)`);
+  const bytes = await readFile(path.join(ROOT, relativePath));
+  return `data:${mime};base64,${bytes.toString('base64')}`;
+}
+
 /**
  * Renders one queue item into both the Instagram (1080x1080) and
  * Facebook/LinkedIn (1200x630) dark-gold-liquid-glass graphic, at 2x pixel
@@ -45,14 +56,19 @@ function fillTemplate(template, values) {
  *
  * `variant` picks the layout under templates/ (e.g. "headline", "vergleich"),
  * `fields` supplies that layout's {{PLACEHOLDER}} values.
+ * `photo`, if given, is a path relative to the repo root (e.g.
+ * "assets/photos/post-06.jpg") made available to the template as
+ * {{PHOTO_DATA_URI}} — a ready-to-use `url(...)` value.
  * Returns { ig: absPath, fb: absPath }.
  */
-export async function renderPost({ variant = 'headline', fields = {}, slug, outDir }) {
+export async function renderPost({ variant = 'headline', fields = {}, photo, slug, outDir }) {
   const fonts = await loadFontsB64();
-  const [fontsCss, baseCss] = await Promise.all([
+  const [fontsCss, baseCss, photoDataUri] = await Promise.all([
     readFile(path.join(ROOT, 'templates/_fonts.css'), 'utf8'),
     readFile(path.join(ROOT, 'templates/_base.css'), 'utf8'),
+    photo ? loadPhotoDataUri(photo) : Promise.resolve(undefined),
   ]);
+  const allFields = photoDataUri ? { ...fields, PHOTO_DATA_URI: photoDataUri } : fields;
   await mkdir(outDir, { recursive: true });
 
   const browser = await chromium.launch();
@@ -66,7 +82,7 @@ export async function renderPost({ variant = 'headline', fields = {}, slug, outD
       // Two passes: the shared stylesheets go in first because they carry
       // font placeholders of their own, which the second pass then resolves.
       const withShared = fillTemplate(rawTemplate, { FONTS_CSS: fontsCss, BASE_CSS: baseCss });
-      const html = fillTemplate(withShared, { ...fonts, ...fields });
+      const html = fillTemplate(withShared, { ...fonts, ...allFields });
 
       const page = await browser.newPage({
         viewport: { width: format.width, height: format.height },
@@ -107,6 +123,7 @@ if (import.meta.url === pathToFileURL(process.argv[1] ?? '').href) {
     const result = await renderPost({
       variant: item.variant,
       fields: item.fields,
+      photo: item.photo,
       slug: item.id,
       outDir,
     });
