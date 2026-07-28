@@ -1,0 +1,28 @@
+/* Typefaces only. Injected via {{FONTS_CSS}} into every template, including
+   ones that deliberately drop the brand canvas in _base.css.
+
+   Deliberately limited to these three faces. Several templates declare
+   `font-weight: 400` on small text; with no 400 face loaded the browser
+   falls back to the 600 above, which is what every published graphic was
+   rendered with. Adding a real Inter 400 here silently re-renders all of
+   them thinner — so templates that genuinely need lighter weights declare
+   those faces themselves. */
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 700;
+  src: url(data:font/ttf;base64,{{PLAYFAIR_700}}) format('truetype');
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 600;
+  src: url(data:font/ttf;base64,{{PLAYFAIR_ITALIC_600}}) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  src: url(data:font/ttf;base64,{{INTER_600}}) format('truetype');
+}

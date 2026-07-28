@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+{{FONTS_CSS}}
+
+/* See nacht/ig.html — lighter weights are scoped to this variant on purpose. */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 200;
+  src: url(data:font/ttf;base64,{{INTER_200}}) format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url(data:font/ttf;base64,{{INTER_400}}) format('truetype');
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+.canvas {
+  position: relative; overflow: hidden;
+  width: 1200px; height: 630px;
+  background: #07080A;
+  font-family: 'Inter', sans-serif;
+}
+
+.screenglow {
+  position: absolute; left: 32%; top: 46%;
+  width: 1000px; height: 760px; transform: translate(-50%, -50%);
+  background: radial-gradient(ellipse at center, rgba(158,192,242,0.30), rgba(122,158,208,0.10) 44%, transparent 70%);
+  filter: blur(60px); pointer-events: none;
+}
+
+/* Landscape splits the scene: the customer's phone on the left, the line
+   that belongs to Buchalik on the right. */
+.stage {
+  position: absolute; inset: 0;
+  display: flex; align-items: center;
+  padding: 0 78px; gap: 64px;
+}
+
+.lock { display: flex; flex-direction: column; align-items: flex-start; }
+
+.weekday {
+  margin: 0 0 12px;
+  font: 400 14px/1 'Inter', sans-serif;
+  letter-spacing: 0.44em; text-transform: uppercase;
+  color: rgba(200,217,242,0.42);
+}
+
+.time {
+  margin: 0;
+  font: 200 132px/1 'Inter', sans-serif;
+  letter-spacing: -0.035em;
+  color: #EDF3FC;
+  font-variant-numeric: tabular-nums;
+}
+
+.searchbar {
+  margin-top: 42px;
+  width: 470px; height: 72px; border-radius: 36px;
+  display: flex; align-items: center; gap: 15px; padding: 0 26px;
+  background: rgba(226,238,255,0.055);
+  border: 1px solid rgba(186,212,250,0.16);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.07);
+}
+.searchbar svg { flex-shrink: 0; opacity: 0.5; }
+.query {
+  font: 400 20px/1 'Inter', sans-serif;
+  color: rgba(228,238,252,0.78);
+}
+.caret {
+  width: 2px; height: 24px; margin-left: -9px;
+  background: rgba(232,240,253,0.85);
+}
+
+.payoff {
+  margin: 0; flex: 1;
+  font-family: 'Playfair Display', serif; font-weight: 700;
+  font-size: 42px; line-height: 1.25;
+  color: #F2F6FD;
+}
+.payoff em { font-style: italic; font-weight: 600; color: #E8C875; }
+
+.url {
+  position: absolute; right: 78px; bottom: 46px;
+  font: 400 15px/1 'Inter', sans-serif;
+  letter-spacing: 0.05em;
+  color: rgba(200,217,242,0.32);
+}
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="screenglow"></div>
+
+  <div class="stage">
+    <div class="lock">
+      <p class="weekday">{{WEEKDAY}}</p>
+      <p class="time">{{TIME}}</p>
+      <div class="searchbar">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#DCE8FA" stroke-width="1.8">
+          <circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35" stroke-linecap="round"/>
+        </svg>
+        <span class="query">{{QUERY}}</span>
+        <span class="caret"></span>
+      </div>
+    </div>
+
+    <p class="payoff">{{PAYOFF}}</p>
+  </div>
+
+  <span class="url">buchalik-websites.com</span>
+</div>
+</body>
+</html>

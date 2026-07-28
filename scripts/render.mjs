@@ -14,14 +14,18 @@ const FORMATS = {
 
 async function loadFontsB64() {
   const dir = path.join(ROOT, 'assets/fonts');
-  const [playfair700, playfairItalic600, inter600] = await Promise.all([
+  const [playfair700, playfairItalic600, inter200, inter400, inter600] = await Promise.all([
     readFile(path.join(dir, 'playfair-700.ttf')),
     readFile(path.join(dir, 'playfair-italic-600.ttf')),
+    readFile(path.join(dir, 'inter-200.ttf')),
+    readFile(path.join(dir, 'inter-400.ttf')),
     readFile(path.join(dir, 'inter-600.ttf')),
   ]);
   return {
     PLAYFAIR_700: playfair700.toString('base64'),
     PLAYFAIR_ITALIC_600: playfairItalic600.toString('base64'),
+    INTER_200: inter200.toString('base64'),
+    INTER_400: inter400.toString('base64'),
     INTER_600: inter600.toString('base64'),
   };
 }
@@ -45,7 +49,10 @@ function fillTemplate(template, values) {
  */
 export async function renderPost({ variant = 'headline', fields = {}, slug, outDir }) {
   const fonts = await loadFontsB64();
-  const baseCss = await readFile(path.join(ROOT, 'templates/_base.css'), 'utf8');
+  const [fontsCss, baseCss] = await Promise.all([
+    readFile(path.join(ROOT, 'templates/_fonts.css'), 'utf8'),
+    readFile(path.join(ROOT, 'templates/_base.css'), 'utf8'),
+  ]);
   await mkdir(outDir, { recursive: true });
 
   const browser = await chromium.launch();
@@ -56,10 +63,10 @@ export async function renderPost({ variant = 'headline', fields = {}, slug, outD
       const templatePath = path.join(ROOT, 'templates', variant, `${key}.html`);
       const rawTemplate = await readFile(templatePath, 'utf8');
 
-      // Two passes: the shared stylesheet goes in first because it carries
-      // font placeholders of its own, which the second pass then resolves.
-      const withBase = fillTemplate(rawTemplate, { BASE_CSS: baseCss });
-      const html = fillTemplate(withBase, { ...fonts, ...fields });
+      // Two passes: the shared stylesheets go in first because they carry
+      // font placeholders of their own, which the second pass then resolves.
+      const withShared = fillTemplate(rawTemplate, { FONTS_CSS: fontsCss, BASE_CSS: baseCss });
+      const html = fillTemplate(withShared, { ...fonts, ...fields });
 
       const page = await browser.newPage({
         viewport: { width: format.width, height: format.height },

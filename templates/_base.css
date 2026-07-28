@@ -1,27 +1,9 @@
-/* Shared brand tokens for every post graphic.
-   Injected into each template via {{BASE_CSS}} so colours, fonts and the
-   glass treatment live in one place instead of drifting across templates.
+/* The dark-gold brand canvas: background, glass panels, footer mark.
+   Injected via {{BASE_CSS}} so these values live in one place instead of
+   drifting across templates. Typefaces are separate ({{FONTS_CSS}}) so a
+   template can inherit the fonts while dropping this visual world entirely.
    Templates override layout (size, position) after this block — equal
    specificity, so source order decides and the template always wins. */
-
-@font-face {
-  font-family: 'Playfair Display';
-  font-style: normal;
-  font-weight: 700;
-  src: url(data:font/ttf;base64,{{PLAYFAIR_700}}) format('truetype');
-}
-@font-face {
-  font-family: 'Playfair Display';
-  font-style: italic;
-  font-weight: 600;
-  src: url(data:font/ttf;base64,{{PLAYFAIR_ITALIC_600}}) format('truetype');
-}
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 600;
-  src: url(data:font/ttf;base64,{{INTER_600}}) format('truetype');
-}
 
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }

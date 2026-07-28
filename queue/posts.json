@@ -1,5 +1,21 @@
 [
   {
+    "id": "post-05-nachts-um-drei",
+    "variant": "nacht",
+    "fields": {
+      "WEEKDAY": "Sonntag",
+      "TIME": "03:47",
+      "QUERY": "dachdecker notdienst",
+      "PAYOFF": "Ihr bester Mitarbeiter<br><em>schläft nie.</em>"
+    },
+    "posted": { "instagram": false, "facebook": false, "linkedin": false },
+    "captions": {
+      "instagram": "Sonntagnacht, 03:47 Uhr. Sturm. Das Wasser steht im Dachboden.\n\nNiemand ruft jetzt in einem Büro an. Der Kunde nimmt das Handy und sucht.\n\nWer in diesem Moment gefunden wird, hat den Auftrag. Wer nicht gefunden wird, schläft weiter – und erfährt nie, dass es ihn gab.\n\nGenau dafür ist eine Website da. Nicht zum schön aussehen. Zum Gefundenwerden, wenn Sie schlafen.\n\n#handwerk #handwerksbetrieb #notdienst #dachdecker #elektriker #sanitärheizung #selbstständig #pforzheim",
+      "facebook": "Sonntagnacht, 03:47 Uhr. Sturm. Das Wasser steht im Dachboden.\n\nIn diesem Moment ruft niemand in einem Büro an. Der Kunde greift zum Handy und sucht – und entscheidet sich in etwa dreißig Sekunden für den, den er findet und dem er zutraut, dass er kommt.\n\nWer da auftaucht, hat den Auftrag. Wer nicht auftaucht, schläft weiter und erfährt nie, dass es diesen Auftrag überhaupt gab.\n\nDas ist der eigentliche Grund für eine gute Website. Nicht, damit sie schön aussieht. Sondern damit Sie auch dann arbeiten, wenn Sie schlafen.\n\nWie sieht Ihr Betrieb um 03:47 Uhr aus, wenn jemand nach Ihnen sucht?\nbuchalik-websites.com",
+      "linkedin": "Sonntagnacht, 03:47 Uhr. Sturm. Das Wasser steht im Dachboden.\n\nIn diesem Moment ruft niemand in einem Büro an. Der Kunde greift zum Handy und sucht. Er vergleicht nicht lange, er liest keine Referenzen – er entscheidet in etwa dreißig Sekunden, wen er anruft.\n\nWer da auftaucht, bekommt den Auftrag. Wer nicht auftaucht, schläft weiter und erfährt nie, dass es diesen Auftrag gab. Das ist der Teil, der weh tut: Der verlorene Auftrag taucht in keiner Statistik auf. Man merkt ihn nicht. Man hat ihn einfach nicht.\n\nDeshalb finde ich die Diskussion darüber, ob eine Website „schön\" ist, meistens am Kern vorbei. Die Frage ist, ob sie um 03:47 Uhr funktioniert: schnell lädt, auf dem Handy bedienbar ist, die Telefonnummer sofort zeigt und klarmacht, dass hier jemand rangeht.\n\nEine Website ist kein Prospekt. Sie ist der einzige Mitarbeiter, der nie schläft.\n\nbuchalik-websites.com"
+    }
+  },
+  {
     "id": "post-04-plus-20-prozent",
     "variant": "stat",
     "fields": {
