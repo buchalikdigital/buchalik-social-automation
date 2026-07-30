@@ -41,6 +41,7 @@ Varianten mit echtem Foto-Hintergrund (`foto`) brauchen zusätzlich ein `photo`-
 | Datei | Quelle | Fotograf | Lizenz |
 | --- | --- | --- | --- |
 | `assets/photos/post-06-baustelle.jpg` | [Pexels](https://www.pexels.com) | James Frid | Pexels-Lizenz — kommerzielle Nutzung erlaubt, keine Attribution verpflichtend |
+| `assets/photos/post-07-praezision.jpg` | [Pexels](https://www.pexels.com) | janakukebal | Pexels-Lizenz — kommerzielle Nutzung erlaubt, keine Attribution verpflichtend |
 
 ## Setup — was du selbst erledigen musst
 

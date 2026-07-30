@@ -1,5 +1,21 @@
 [
   {
+    "id": "post-07-massarbeit",
+    "variant": "foto",
+    "photo": "assets/photos/post-07-praezision.jpg",
+    "fields": {
+      "EYEBROW": "Präzisionsarbeit",
+      "HEADLINE": "Kein Massenprodukt.<br><em>Ihre Website auch nicht.</em>",
+      "PHOTO_POSITION": "58% 55%"
+    },
+    "posted": { "instagram": false, "facebook": false, "linkedin": false },
+    "captions": {
+      "instagram": "Jedes Detail sitzt exakt. Kein Zufall, keine Massenware – Maßarbeit.\n\nGenauso arbeiten die besten Handwerksbetriebe: keine Abkürzungen, jede Verbindung, jede Naht, jeder Handgriff stimmt.\n\nWarum sollte die Website davon eine Ausnahme sein?\n\nIch baue keine Vorlagen. Ich baue Websites mit demselben Anspruch, den Sie an Ihre eigene Arbeit haben.\n\n#handwerk #handwerksbetrieb #metallbau #präzision #maßarbeit #webdesign #pforzheim",
+      "facebook": "Jedes Detail an diesem Stück sitzt exakt – keine Massenware, sondern Maßarbeit bis ins letzte Detail.\n\nGenau so arbeiten die besten Handwerksbetriebe, die ich kenne: keine Abkürzungen, jede Schweißnaht, jede Verbindung, jeder Handgriff sitzt.\n\nNur an einer Stelle hört diese Sorgfalt bei vielen Betrieben plötzlich auf: bei der eigenen Website. Dort reicht dann plötzlich die Vorlage von der Stange.\n\nDas passt nicht zusammen. Wenn Ihre Arbeit Maßarbeit ist, sollte es Ihre Website auch sein.\n\nbuchalik-websites.com",
+      "linkedin": "Jedes Detail an diesem Stück sitzt exakt – keine Massenware, sondern Präzisionsarbeit bis auf den letzten Millimeter.\n\nGenau so arbeiten die besten Handwerksbetriebe, mit denen ich zu tun habe. Egal ob Metallbau, Sanitärtechnik oder Zimmerei: keine Abkürzungen, jede Verbindung sitzt, jeder Handgriff ist durchdacht. Diese Sorgfalt ist der eigentliche Wert, den Kunden bezahlen – nicht nur das fertige Ergebnis.\n\nErstaunlich oft hört diese Sorgfalt an einer einzigen Stelle auf: bei der eigenen Website. Dort reicht dann eine Vorlage von der Stange, die tausend andere Betriebe genauso nutzen.\n\nDas ist der Widerspruch, den ich immer wieder sehe – und der Grund, warum ich keine Baukasten-Websites baue. Wenn die Arbeit Maßarbeit ist, sollte die Website es auch sein: individuell entwickelt, nicht von der Stange.\n\nbuchalik-websites.com"
+    }
+  },
+  {
     "id": "post-06-echte-arbeit",
     "variant": "foto",
     "photo": "assets/photos/post-06-baustelle.jpg",
