@@ -28,6 +28,11 @@ jobs:
 
       - run: npx playwright install --with-deps chromium
 
+      - name: Configure git identity
+        run: |
+          git config user.name "buchalik-content-bot"
+          git config user.email "actions@github.com"
+
       - name: Publish next queue item
         env:
           META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}
