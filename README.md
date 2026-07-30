@@ -42,6 +42,9 @@ Varianten mit echtem Foto-Hintergrund (`foto`) brauchen zusätzlich ein `photo`-
 | --- | --- | --- | --- |
 | `assets/photos/post-06-baustelle.jpg` | [Pexels](https://www.pexels.com) | James Frid | Pexels-Lizenz — kommerzielle Nutzung erlaubt, keine Attribution verpflichtend |
 | `assets/photos/post-07-praezision.jpg` | [Pexels](https://www.pexels.com) | janakukebal | Pexels-Lizenz — kommerzielle Nutzung erlaubt, keine Attribution verpflichtend |
+| `assets/photos/post-08-plan.jpg` | [Pexels](https://www.pexels.com) | Tima Miroshnichenko | Pexels-Lizenz — kommerzielle Nutzung erlaubt, keine Attribution verpflichtend |
+| `assets/photos/post-09-designprinzipien.jpg` | [Pexels](https://www.pexels.com) | Polina Zimmerman | Pexels-Lizenz — kommerzielle Nutzung erlaubt, keine Attribution verpflichtend |
+| `assets/photos/post-10-farbwahl.jpg` | [Pexels](https://www.pexels.com) | Ivan S | Pexels-Lizenz — kommerzielle Nutzung erlaubt, keine Attribution verpflichtend |
 
 ## Setup — was du selbst erledigen musst
 

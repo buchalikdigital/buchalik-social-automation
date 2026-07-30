@@ -1,5 +1,53 @@
 [
   {
+    "id": "post-08-plan-vor-rechnung",
+    "variant": "foto",
+    "photo": "assets/photos/post-08-plan.jpg",
+    "fields": {
+      "EYEBROW": "Der erste Schritt",
+      "HEADLINE": "Jedes gute Projekt beginnt<br><em>mit einem Plan, nicht mit einer Rechnung.</em>",
+      "PHOTO_POSITION": "center 45%"
+    },
+    "posted": { "instagram": false, "facebook": false, "linkedin": false },
+    "captions": {
+      "instagram": "Jedes gute Projekt beginnt mit einem Plan, nicht mit einer Rechnung.\n\nDeshalb bekommen Sie bei mir zuerst einen kostenlosen Design-Entwurf Ihrer Website – bevor Sie sich entscheiden, ob Sie starten möchten.\n\nSie sehen genau, was Sie bekommen. Kein Risiko, keine Vorkasse für ein Ergebnis, das Sie noch nicht kennen.\n\nErst wenn der Entwurf passt, geht's los. In 1–2 Wochen live.\n\n#handwerk #handwerksbetrieb #webdesign #dachdecker #elektriker #sanitärheizung #pforzheim",
+      "facebook": "Jedes gute Projekt beginnt mit einem durchdachten Plan – nicht mit einer Rechnung, die Sie blind unterschreiben.\n\nDeshalb läuft es bei mir andersherum als bei den meisten Agenturen: Zuerst ein kostenloses Gespräch, danach ein kostenloser Design-Entwurf Ihrer eigenen Website. Sie sehen genau, was Sie bekommen würden – bevor Sie sich entscheiden, ob Sie überhaupt starten möchten.\n\nKein Risiko, keine Vorkasse für ein Ergebnis, das Sie noch nicht kennen. Erst wenn der Entwurf passt, geht's los – und dann sind Sie in 1–2 Wochen live.\n\nFragen zu Ihrem Betrieb? Einfach schreiben.\nbuchalik-websites.com",
+      "linkedin": "Jedes gute Projekt beginnt mit einem durchdachten Plan – nicht mit einer Rechnung.\n\nIn den meisten Branchen ist das selbstverständlich: Ein Architekt zeichnet, bevor gebaut wird. Ein Handwerksbetrieb kalkuliert, bevor er ein Angebot schreibt. Nur bei Websites ist es oft umgekehrt – erst zahlen, dann sehen, was dabei herauskommt.\n\nIch mache es andersherum. Auf ein kostenloses Erstgespräch folgt ein kostenloser Design-Entwurf Ihrer eigenen Website. Sie sehen konkret, wie Ihr Betrieb online aussehen würde – bevor Sie sich entscheiden, ob Sie überhaupt starten möchten.\n\nDas ist kein Marketing-Trick, sondern die logische Konsequenz aus einer einfachen Überlegung: Wenn ich von der Qualität meiner Arbeit überzeugt bin, kann ich sie auch zuerst zeigen, statt sie zuerst zu verkaufen.\n\nPasst der Entwurf, geht's los – Umsetzung in 1–2 Wochen, danach laufende Betreuung im Abo.\n\nbuchalik-websites.com"
+    }
+  },
+  {
+    "id": "post-09-designprinzipien",
+    "variant": "foto",
+    "photo": "assets/photos/post-09-designprinzipien.jpg",
+    "fields": {
+      "EYEBROW": "Kein Zufall",
+      "HEADLINE": "Gutes Design hat Prinzipien.<br><em>Kein Baukasten hat die.</em>",
+      "PHOTO_POSITION": "center 42%"
+    },
+    "posted": { "instagram": false, "facebook": false, "linkedin": false },
+    "captions": {
+      "instagram": "Über 130 Jahre Grafikdesign-Geschichte – und die meisten Website-Baukästen ignorieren sie komplett.\n\nGutes Design hat Prinzipien: Kontrast, Hierarchie, Weißraum, Typografie, die zum Betrieb passt. Kein Baukasten der Welt kennt Ihren Betrieb.\n\nDeshalb entwerfe ich jede Website von Grund auf – mit denselben Prinzipien, die seit Jahrzehnten funktionieren, nicht mit Vorlagen, die zufällig für jeden passen sollen.\n\n#handwerk #handwerksbetrieb #webdesign #grafikdesign #dachdecker #malerbetrieb #pforzheim",
+      "facebook": "Über 130 Jahre Grafikdesign-Geschichte – und die meisten Website-Baukästen ignorieren sie komplett.\n\nGutes Design ist kein Zufall. Es folgt Prinzipien: Kontrast, Hierarchie, Weißraum, eine Typografie, die zum Betrieb passt und nicht nur „irgendwie modern\" aussieht. Diese Prinzipien gibt es seit Jahrzehnten – gute Gestaltung war nie eine Frage des Trends, sondern des Handwerks.\n\nEin Baukasten kennt diese Prinzipien nicht. Er kennt nur ein Raster, in das Ihr Betrieb hineingepresst wird – genau wie tausend andere Betriebe auch.\n\nDeshalb entwerfe ich jede Website von Grund auf, statt eine Vorlage zu befüllen. Mit denselben Prinzipien, die seit Jahrzehnten funktionieren.\n\nbuchalik-websites.com",
+      "linkedin": "Über 130 Jahre Grafikdesign-Geschichte – und die meisten Website-Baukästen ignorieren sie komplett.\n\nGutes Design ist kein Zufall und keine Geschmacksfrage. Es folgt Prinzipien, die es seit Jahrzehnten gibt: Kontrast, um Wichtiges hervorzuheben. Hierarchie, damit das Auge weiß, wo es zuerst hinschauen soll. Weißraum, der Inhalte atmen lässt, statt sie zu überladen. Eine Typografie, die zum Charakter des Betriebs passt, nicht nur „irgendwie modern\" wirkt.\n\nEin Baukasten kennt keines dieser Prinzipien. Er kennt ein Raster und ein paar austauschbare Farboptionen – der Rest ist Zufall, der bei tausend anderen Nutzern genauso zufällig ist.\n\nDas ist der eigentliche Unterschied zwischen einer Baukasten-Website und einer entwickelten Website: nicht der Preis, sondern ob am Ende ein Mensch mit Designverständnis entschieden hat, wie Ihr Betrieb online wirkt – oder ein Algorithmus, der jedem dieselbe Vorlage zuweist.\n\nGenau deshalb entwerfe ich jede Website von Grund auf.\n\nbuchalik-websites.com"
+    }
+  },
+  {
+    "id": "post-10-farbwahl",
+    "variant": "foto",
+    "photo": "assets/photos/post-10-farbwahl.jpg",
+    "fields": {
+      "EYEBROW": "Vor der ersten Zeile Code",
+      "HEADLINE": "Die Farbe Ihrer Website<br><em>ist keine Zufallsentscheidung.</em>",
+      "PHOTO_POSITION": "42% 62%"
+    },
+    "posted": { "instagram": false, "facebook": false, "linkedin": false },
+    "captions": {
+      "instagram": "Die Farbe Ihrer Website ist keine Zufallsentscheidung.\n\nWarmes Gold wirkt anders als kühles Blau. Ein Dachdecker braucht eine andere Farbsprache als ein Malerbetrieb, eine andere Typografie, einen anderen Bildaufbau.\n\nEin Baukasten fragt Sie nach „Ihrer Lieblingsfarbe\". Ich frage: Was soll ein Kunde fühlen, wenn er Ihre Seite öffnet?\n\nGenau darüber denke ich nach, bevor die erste Zeile Code entsteht.\n\n#handwerk #handwerksbetrieb #webdesign #farbpsychologie #dachdecker #pforzheim",
+      "facebook": "Die Farbe Ihrer Website ist keine Zufallsentscheidung – auch wenn es bei den meisten Baukästen genau so wirkt.\n\nWarmes Gold wirkt anders als kühles Blau. Ein Dachdeckerbetrieb braucht eine andere Farbsprache als ein Malerbetrieb oder ein Sanitärbetrieb – eine andere Typografie, einen anderen Bildaufbau, eine andere Tonalität im Text.\n\nEin Baukasten fragt Sie nach Ihrer Lieblingsfarbe aus zehn Vorschlägen. Ich frage mich bei jedem Projekt: Was soll ein potenzieller Kunde fühlen, wenn er Ihre Seite öffnet? Vertrauen? Tradition? Modernität? Zuverlässigkeit?\n\nGenau darüber denke ich nach, bevor die erste Zeile Code entsteht – nicht danach.\n\nbuchalik-websites.com",
+      "linkedin": "Die Farbe Ihrer Website ist keine Zufallsentscheidung – auch wenn es bei den meisten Baukasten-Websites genau so aussieht.\n\nWarmes Gold transportiert etwas anderes als kühles Blau. Eine serifenlose, technische Schrift wirkt anders als eine klassische Serifenschrift mit Tradition. Ein Dachdeckerbetrieb, der seit drei Generationen existiert, braucht eine andere visuelle Sprache als ein junger Elektrobetrieb, der auf Modernität setzt.\n\nDiese Entscheidungen – Farbe, Typografie, Bildsprache, Tonalität – sind kein Beiwerk. Sie sind die Antwort auf eine einzige Frage: Was soll ein potenzieller Kunde fühlen, wenn er Ihre Website öffnet? Vertrauen, Tradition, Präzision, Nahbarkeit – jede dieser Empfindungen entsteht durch bewusste Gestaltungsentscheidungen, nicht durch Zufall.\n\nEin Baukasten kann diese Frage nicht stellen. Er bietet Ihnen zehn Farboptionen und ein Standardlayout – fertig. Ich stelle mir diese Frage bei jedem Projekt neu, bevor die erste Zeile Code entsteht.\n\nbuchalik-websites.com"
+    }
+  },
+  {
     "id": "post-07-massarbeit",
     "variant": "foto",
     "photo": "assets/photos/post-07-praezision.jpg",
