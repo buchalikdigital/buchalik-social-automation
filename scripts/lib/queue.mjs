@@ -12,12 +12,22 @@ export async function saveQueue(items) {
 }
 
 /**
- * Next item to work on: the first one where at least one platform
- * hasn't been posted yet. This makes re-runs after a partial failure
- * safe — platforms already marked posted are skipped, not re-posted.
+ * Next item still missing at least one of Instagram/Facebook (the two
+ * always move together, since Meta needs the same hosted-image step).
  */
-export function findNextItem(items) {
-  return items.find(
-    (item) => !item.posted.instagram || !item.posted.facebook || (item.captions.linkedin && !item.posted.linkedin)
-  );
+export function findNextMetaItem(items) {
+  return items.find((item) => !item.posted.instagram || !item.posted.facebook);
+}
+
+/**
+ * Next item still missing LinkedIn. Deliberately a SEPARATE cursor from
+ * findNextMetaItem: if Meta is down (missing credentials, rate limits),
+ * the oldest item can sit unfinished on Instagram/Facebook indefinitely.
+ * Without its own cursor, LinkedIn would get stuck retrying that same
+ * oldest item's Meta-only gap forever instead of moving on to newer posts
+ * — which is exactly what happened 2026-08-01 (post-08 blocked post-09
+ * from ever going out on LinkedIn, even though LinkedIn itself was fine).
+ */
+export function findNextLinkedInItem(items) {
+  return items.find((item) => item.captions.linkedin && !item.posted.linkedin);
 }

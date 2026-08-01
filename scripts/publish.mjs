@@ -1,7 +1,7 @@
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { renderPost } from './render.mjs';
-import { loadQueue, saveQueue, findNextItem } from './lib/queue.mjs';
+import { loadQueue, saveQueue, findNextMetaItem, findNextLinkedInItem } from './lib/queue.mjs';
 import { publishInstagram, publishFacebookPhoto } from './lib/meta.mjs';
 import { publishLinkedInPost } from './lib/linkedin.mjs';
 import { commitAndPush, waitForUrl } from './lib/git.mjs';
@@ -15,28 +15,27 @@ function env(name, { required = false } = {}) {
   return value;
 }
 
-async function main() {
-  const queue = await loadQueue();
-  const item = findNextItem(queue);
+const outDir = path.join(ROOT, 'docs/images');
 
-  if (!item) {
-    console.log('Queue is empty or fully posted — nothing to do.');
-    return;
-  }
-
-  console.log(`Next queue item: ${item.id}`);
-
-  // 1. Render both graphics.
-  const outDir = path.join(ROOT, 'docs/images');
-  const rendered = await renderPost({
+async function render(item) {
+  return renderPost({
     variant: item.variant,
     fields: item.fields,
     photo: item.photo,
     slug: item.id,
     outDir,
   });
+}
 
-  // 2. Publish the rendered images so Instagram/Facebook can fetch them by URL.
+/**
+ * Instagram + Facebook advance together, on their own cursor: the oldest
+ * item still missing either one. Needs the image hosted (Meta fetches by
+ * URL), so it renders, commits+pushes, and waits for GitHub Pages.
+ */
+async function publishMeta(item, errors) {
+  console.log(`Next Meta item: ${item.id}`);
+  const rendered = await render(item);
+
   if (!PAGES_BASE_URL) {
     throw new Error('PAGES_BASE_URL is not set — needed so Meta can fetch the hosted image.');
   }
@@ -52,24 +51,15 @@ async function main() {
     await waitForUrl(fbImageUrl);
   }
 
-  // 3. Publish to each platform independently — a failure on one must not
-  //    block or duplicate the others on a re-run.
-  const errors = [];
-
   if (!item.posted.instagram) {
     try {
       const igToken = env('META_ACCESS_TOKEN', { required: true });
       const igUserId = env('META_IG_USER_ID', { required: true });
-      await publishInstagram({
-        accessToken: igToken,
-        igUserId,
-        imageUrl: igImageUrl,
-        caption: item.captions.instagram,
-      });
+      await publishInstagram({ accessToken: igToken, igUserId, imageUrl: igImageUrl, caption: item.captions.instagram });
       item.posted.instagram = true;
       console.log('Instagram: published.');
     } catch (err) {
-      errors.push(`Instagram: ${err.message}`);
+      errors.push(`Instagram (${item.id}): ${err.message}`);
     }
   }
 
@@ -77,43 +67,58 @@ async function main() {
     try {
       const fbToken = env('META_ACCESS_TOKEN', { required: true });
       const pageId = env('META_PAGE_ID', { required: true });
-      await publishFacebookPhoto({
-        accessToken: fbToken,
-        pageId,
-        imageUrl: fbImageUrl,
-        caption: item.captions.facebook,
-      });
+      await publishFacebookPhoto({ accessToken: fbToken, pageId, imageUrl: fbImageUrl, caption: item.captions.facebook });
       item.posted.facebook = true;
       console.log('Facebook: published.');
     } catch (err) {
-      errors.push(`Facebook: ${err.message}`);
+      errors.push(`Facebook (${item.id}): ${err.message}`);
     }
   }
+}
 
-  if (item.captions.linkedin && !item.posted.linkedin) {
-    const liToken = process.env.LINKEDIN_ACCESS_TOKEN;
-    const personUrn = process.env.LINKEDIN_PERSON_URN;
-    if (!liToken || !personUrn) {
-      console.log('LinkedIn: skipped (no LINKEDIN_ACCESS_TOKEN / LINKEDIN_PERSON_URN secret set yet).');
-    } else {
-      try {
-        await publishLinkedInPost({
-          accessToken: liToken,
-          personUrn,
-          imagePath: rendered.fb,
-          caption: item.captions.linkedin,
-        });
-        item.posted.linkedin = true;
-        console.log('LinkedIn: published.');
-      } catch (err) {
-        errors.push(`LinkedIn: ${err.message}`);
-      }
-    }
+/**
+ * LinkedIn advances on its own cursor, independent of Meta's — see
+ * findNextLinkedInItem for why. Uploads the image binary directly, so it
+ * only needs a local render, no Pages hosting or wait.
+ */
+async function publishLinkedIn(item, errors) {
+  console.log(`Next LinkedIn item: ${item.id}`);
+  const rendered = await render(item);
+
+  const liToken = process.env.LINKEDIN_ACCESS_TOKEN;
+  const personUrn = process.env.LINKEDIN_PERSON_URN;
+  if (!liToken || !personUrn) {
+    console.log('LinkedIn: skipped (no LINKEDIN_ACCESS_TOKEN / LINKEDIN_PERSON_URN secret set yet).');
+    return;
+  }
+  try {
+    await publishLinkedInPost({ accessToken: liToken, personUrn, imagePath: rendered.fb, caption: item.captions.linkedin });
+    item.posted.linkedin = true;
+    console.log('LinkedIn: published.');
+  } catch (err) {
+    errors.push(`LinkedIn (${item.id}): ${err.message}`);
+  }
+}
+
+async function main() {
+  const queue = await loadQueue();
+  const metaItem = findNextMetaItem(queue);
+  const linkedInItem = findNextLinkedInItem(queue);
+
+  if (!metaItem && !linkedInItem) {
+    console.log('Queue is empty or fully posted — nothing to do.');
+    return;
   }
 
-  // 4. Persist whatever succeeded, even if something else failed.
+  const errors = [];
+  if (metaItem) await publishMeta(metaItem, errors);
+  if (linkedInItem) await publishLinkedIn(linkedInItem, errors);
+
+  // Persist whatever succeeded, even if something else failed — one commit
+  // covering both cursors (skipped cleanly if neither item changed).
   await saveQueue(queue);
-  await commitAndPush(['queue/posts.json'], `Mark progress for ${item.id}`);
+  const touchedIds = [...new Set([metaItem?.id, linkedInItem?.id].filter(Boolean))].join(', ');
+  await commitAndPush(['queue/posts.json'], `Mark progress for ${touchedIds}`);
 
   if (errors.length) {
     throw new Error(`Completed with errors:\n${errors.join('\n')}`);
