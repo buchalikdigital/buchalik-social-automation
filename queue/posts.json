@@ -40,6 +40,26 @@
     }
   },
   {
+    "id": "post-11-foerderrechner",
+    "variant": "stat",
+    "fields": {
+      "EYEBROW": "BEG-Förderung · Wärmepumpe",
+      "STAT": "70%",
+      "STAT_LABEL": "Förderung möglich",
+      "SUBLINE": "Ein Förderrechner direkt auf der Website zeigt Kunden sofort, was sie sparen – <strong>bevor</strong> sie überhaupt anrufen."
+    },
+    "posted": {
+      "instagram": false,
+      "facebook": false,
+      "linkedin": false
+    },
+    "captions": {
+      "instagram": "Bis zu 70 % Förderung für eine neue Wärmepumpe – das weiß kaum ein Kunde, bevor er anruft.\n\nDeshalb baue ich für Sanitär- und Heizungsbetriebe einen Förderrechner direkt in die Website ein. Kunden sehen sofort, was für sie drin ist – vor dem ersten Gespräch, nicht danach.\n\nGenau solche Details entscheiden, ob aus einem Besucher eine Anfrage wird.\n\n#handwerk #handwerksbetrieb #webdesign #sanitärheizung #wärmepumpe #förderung #pforzheim",
+      "facebook": "Bis zu 70 % Förderung für eine neue Wärmepumpe – aber nur, wenn der Kunde das auch weiß, bevor er anruft.\n\nDeshalb baue ich für Sanitär- und Heizungsbetriebe einen Förderrechner direkt in die Website ein: Kunden sehen sofort, was für sie möglich ist.\n\nFragen zu Ihrer Website? Einfach schreiben.\nbuchalik-websites.com",
+      "linkedin": "Bis zu 70 % Förderung für eine neue Wärmepumpe – die wenigsten Kunden wissen das, bevor sie bei einem Sanitär- oder Heizungsbetrieb anrufen.\n\nDie meisten Handwerker-Websites erwähnen Förderung höchstens in einem Nebensatz. Dabei ist genau das oft die Information, die über eine Anfrage entscheidet: Wer sieht, dass eine neue Heizung durch Förderung deutlich günstiger wird als gedacht, ruft eher an als jemand, der nur einen Listenpreis sieht.\n\nDeshalb baue ich für Betriebe aus diesem Bereich einen Förderrechner direkt in die Website ein – kein Download, kein Anruf beim Amt, sondern eine Zahl, die der Kunde sofort sieht.\n\nEin kleines Detail mit großer Wirkung auf die Anfragequote.\n\nbuchalik-websites.com"
+    }
+  },
+  {
     "id": "post-10-farbwahl",
     "variant": "foto",
     "photo": "assets/photos/post-10-farbwahl.jpg",
