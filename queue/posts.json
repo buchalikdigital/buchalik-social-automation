@@ -200,6 +200,20 @@
     }
   },
   {
+    "id": "post-12-farbwerk-vorher-nachher",
+    "externalImage": "assets/external/farbwerk-before-after.png",
+    "posted": {
+      "instagram": false,
+      "facebook": false,
+      "linkedin": false
+    },
+    "captions": {
+      "instagram": "Handwerkliches Können zeigt sich vor Ort. Vertrauen entsteht aber schon vorher — online (Konzept-Beispiel: FARBWERK GmbH).\n\nWer online altmodisch wirkt, verliert gegen den Wettbewerber mit der besseren Website.\n\n#Malermeister #Malerbetrieb #Webdesign #Handwerkermarketing #Buchalikdigital",
+      "facebook": "Farbe mit Haltung — innen wie außen. 🎨 (Konzept-Beispiel für einen Malermeisterbetrieb)",
+      "linkedin": "Kunden vergleichen einen Betrieb online, bevor sie anrufen. Der Unterschied zwischen einer veralteten und einer durchdachten Website entscheidet oft darüber, wer den Auftrag bekommt (Konzept-Beispiel: FARBWERK GmbH)."
+    }
+  },
+  {
     "id": "post-02-sauber-programmiert",
     "variant": "headline",
     "fields": {
