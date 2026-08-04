@@ -14,9 +14,12 @@ export async function saveQueue(items) {
 /**
  * Next item still missing at least one of Instagram/Facebook (the two
  * always move together, since Meta needs the same hosted-image step).
+ * Items with `externalImage` (a pre-rendered PNG reused as-is, not built
+ * from a variant/fields) are skipped here — render() has nothing to
+ * generate for them and would throw. LinkedIn-only for now.
  */
 export function findNextMetaItem(items) {
-  return items.find((item) => !item.posted.instagram || !item.posted.facebook);
+  return items.find((item) => !item.externalImage && (!item.posted.instagram || !item.posted.facebook));
 }
 
 /**

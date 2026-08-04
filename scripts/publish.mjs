@@ -83,7 +83,12 @@ async function publishMeta(item, errors) {
  */
 async function publishLinkedIn(item, errors) {
   console.log(`Next LinkedIn item: ${item.id}`);
-  const rendered = await render(item);
+  // externalImage = a PNG already fully composited elsewhere (e.g. by the
+  // sibling social-post-factory repo), committed as-is under assets/external/
+  // and posted unchanged — no variant/fields to render.
+  const imagePath = item.externalImage
+    ? path.join(ROOT, item.externalImage)
+    : (await render(item)).fb;
 
   const liToken = process.env.LINKEDIN_ACCESS_TOKEN;
   const personUrn = process.env.LINKEDIN_PERSON_URN;
@@ -92,7 +97,7 @@ async function publishLinkedIn(item, errors) {
     return;
   }
   try {
-    await publishLinkedInPost({ accessToken: liToken, personUrn, imagePath: rendered.fb, caption: item.captions.linkedin });
+    await publishLinkedInPost({ accessToken: liToken, personUrn, imagePath, caption: item.captions.linkedin });
     item.posted.linkedin = true;
     console.log('LinkedIn: published.');
   } catch (err) {
