@@ -222,7 +222,7 @@
     "posted": {
       "instagram": false,
       "facebook": false,
-      "linkedin": false
+      "linkedin": true
     },
     "captions": {
       "instagram": "„Ihr Betrieb verdient keine Vorlage.\" – wie das technisch entsteht:\n\nKein Baukasten. Kein Plugin-Wirrwarr, das bei jedem Update bricht.\n\nIch baue jede Website mit Next.js 15, TypeScript und Tailwind – demselben technischen Fundament, auf dem auch große Tech-Produkte laufen. Sauber strukturiert, typsicher, ohne Altlasten.\n\nMan sieht das nicht auf den ersten Blick. Man merkt es an der Ladezeit – und daran, dass in einem Jahr noch alles läuft.\n\n#webdevelopment #nextjs #typescript #cleancode #handwerksbetrieb",
