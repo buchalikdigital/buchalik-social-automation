@@ -14,12 +14,13 @@ const FORMATS = {
 
 async function loadFontsB64() {
   const dir = path.join(ROOT, 'assets/fonts');
-  const [playfair700, playfairItalic600, inter200, inter400, inter600] = await Promise.all([
+  const [playfair700, playfairItalic600, inter200, inter400, inter600, inter800] = await Promise.all([
     readFile(path.join(dir, 'playfair-700.ttf')),
     readFile(path.join(dir, 'playfair-italic-600.ttf')),
     readFile(path.join(dir, 'inter-200.ttf')),
     readFile(path.join(dir, 'inter-400.ttf')),
     readFile(path.join(dir, 'inter-600.ttf')),
+    readFile(path.join(dir, 'inter-800.ttf')),
   ]);
   return {
     PLAYFAIR_700: playfair700.toString('base64'),
@@ -27,6 +28,7 @@ async function loadFontsB64() {
     INTER_200: inter200.toString('base64'),
     INTER_400: inter400.toString('base64'),
     INTER_600: inter600.toString('base64'),
+    INTER_800: inter800.toString('base64'),
   };
 }
 
@@ -111,7 +113,10 @@ export async function renderPost({ variant = 'headline', fields = {}, photo, slu
 if (import.meta.url === pathToFileURL(process.argv[1] ?? '').href) {
   const wantedId = process.argv[2];
   const queue = await loadQueue();
-  const items = wantedId ? queue.filter((item) => item.id === wantedId) : queue;
+  const items = (wantedId ? queue.filter((item) => item.id === wantedId) : queue)
+    // externalImage items are pre-composited elsewhere and have no
+    // variant/fields to render — see publish.mjs's publishLinkedIn.
+    .filter((item) => !item.externalImage);
 
   if (!items.length) {
     console.error(`No queue item matches "${wantedId}". Available: ${queue.map((i) => i.id).join(', ')}`);

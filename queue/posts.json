@@ -1,5 +1,50 @@
 [
   {
+    "id": "post-11-einfach",
+    "variant": "apple",
+    "fields": {
+      "KICKER": "Design",
+      "HEADLINE": "Einfach.<br><em>Das war die harte Arbeit.</em>",
+      "SUBTITLE": "Jede Website, die mühelos wirkt, hat vorher jemanden viel Mühe gekostet."
+    },
+    "posted": { "instagram": false, "facebook": false, "linkedin": false },
+    "captions": {
+      "instagram": "Einfach. Das war die harte Arbeit.\n\nJede Website, die mühelos wirkt, hat vorher jemanden viel Mühe gekostet.\n\nEin Baukasten spart Ihnen diese Mühe – und das sieht man ihr an. Zu viele Elemente, zu viel Text, kein klarer Fokus.\n\nGute Gestaltung ist nicht das, was man hinzufügt. Es ist das, was man wegzulassen wagt.\n\n#handwerk #handwerksbetrieb #webdesign #design #dachdecker #malerbetrieb #pforzheim",
+      "facebook": "Einfach. Das war die harte Arbeit.\n\nJede Website, die mühelos wirkt, hat vorher jemanden viel Mühe gekostet. Was am Ende simpel aussieht, ist meistens das Ergebnis von zehn verworfenen Versionen, nicht der ersten Idee.\n\nEin Baukasten spart sich diese Mühe – und das sieht man ihm an. Zu viele Elemente auf einmal, zu viel Text, kein klarer Fokus, weil niemand die Zeit hatte, etwas wegzulassen.\n\nGute Gestaltung ist nicht das, was man hinzufügt. Es ist das, was man bewusst weglässt – und genau dafür nehme ich mir bei jeder Website die Zeit.\n\nbuchalik-websites.com",
+      "linkedin": "Einfach. Das war die harte Arbeit.\n\nEs gibt einen Satz, der in der Gestaltung oft zitiert wird: Einfachheit ist die höchste Form der Raffinesse. Was dabei gerne übersehen wird: Einfachheit ist nicht der Startpunkt. Sie ist das Ergebnis harter Arbeit.\n\nJede Website, die mühelos wirkt, hat vorher jemanden viel Mühe gekostet – die Entscheidung, welche drei Dinge auf der Startseite wirklich zählen, ist schwerer zu treffen als einfach alles draufzupacken, was ginge.\n\nEin Baukasten trifft diese Entscheidung nicht. Er bietet Ihnen alle Bausteine gleichzeitig an, und das Ergebnis sieht danach aus: viele Elemente, wenig Fokus.\n\nGute Gestaltung ist selten das, was hinzugefügt wird. Es ist das, was jemand bewusst weggelassen hat – und genau diese Entscheidung treffe ich bei jeder Website, die ich baue.\n\nbuchalik-websites.com"
+    }
+  },
+  {
+    "id": "post-12-zwei-wochen",
+    "variant": "apple",
+    "fields": {
+      "KICKER": "Tempo",
+      "HEADLINE": "Zwei Wochen.<br><em>Nicht zwei Monate.</em>",
+      "SUBTITLE": "Kostenloser Entwurf zuerst, Umsetzung danach — ohne endlose Abstimmungsschleifen."
+    },
+    "posted": { "instagram": false, "facebook": false, "linkedin": false },
+    "captions": {
+      "instagram": "Zwei Wochen. Nicht zwei Monate.\n\nKostenloser Entwurf zuerst. Sie sehen Ihre Website, bevor Sie sich entscheiden.\n\nDanach: Umsetzung in 1–2 Wochen, nicht in einem Prozess, der sich über Monate zieht, weil zehn Personen mitreden müssen.\n\nEine Person, ein Ansprechpartner, ein klarer Zeitplan.\n\n#handwerk #handwerksbetrieb #webdesign #dachdecker #elektriker #sanitärheizung #pforzheim",
+      "facebook": "Zwei Wochen. Nicht zwei Monate.\n\nBei den meisten Agenturprojekten vergeht mehr Zeit mit Abstimmung als mit tatsächlicher Arbeit – Kickoff-Meeting, Konzeptpräsentation, zwei Feedbackrunden, Freigabeschleifen. Am Ende dauert ein Projekt drei Monate, obwohl die eigentliche Arbeit vielleicht zwei Wochen gebraucht hätte.\n\nBei mir gibt es nur einen Ansprechpartner: mich. Kostenloser Entwurf zuerst, damit Sie sehen, was Sie bekommen. Passt er, folgt die Umsetzung in 1–2 Wochen – ohne Warteschleifen, weil noch jemand anderes zustimmen muss.\n\nKürzer bedeutet hier nicht schlechter. Es bedeutet nur: kein unnötiger Umweg.\n\nbuchalik-websites.com",
+      "linkedin": "Zwei Wochen. Nicht zwei Monate.\n\nBei den meisten Website-Projekten mit einer Agentur vergeht mehr Zeit mit Abstimmung als mit tatsächlicher Arbeit: Kickoff, Konzeptpräsentation, zwei oder drei Feedbackrunden, interne Freigaben. Am Ende dauert ein Projekt drei Monate, obwohl die eigentliche Umsetzung vielleicht zwei Wochen gebraucht hätte.\n\nDas liegt selten an der Arbeit selbst. Es liegt an der Anzahl der Personen, die mitreden müssen, bevor irgendetwas passieren darf.\n\nBei mir gibt es einen Ansprechpartner: mich. Erst ein kostenloser Design-Entwurf, damit Sie konkret sehen, was Sie bekommen würden. Passt er, folgt die Umsetzung in 1–2 Wochen – kein Umweg über Abteilungen, die es bei einem Ein-Personen-Betrieb schlicht nicht gibt.\n\nManchmal ist der größte Vorteil eines kleinen Anbieters nicht der Preis. Es ist die fehlende Bürokratie.\n\nbuchalik-websites.com"
+    }
+  },
+  {
+    "id": "post-13-fuer-sie",
+    "variant": "apple",
+    "fields": {
+      "KICKER": "Individuell",
+      "HEADLINE": "Gebaut für Sie.<br><em>Nicht für alle.</em>",
+      "SUBTITLE": "Eine Vorlage passt zu jedem ein bisschen. Eine entwickelte Website passt zu Ihnen genau."
+    },
+    "posted": { "instagram": false, "facebook": false, "linkedin": false },
+    "captions": {
+      "instagram": "Gebaut für Sie. Nicht für alle.\n\nEine Vorlage passt zu jedem ein bisschen. Eine entwickelte Website passt zu Ihnen genau.\n\nIhre Farben, Ihre Sprache, Ihre Bilder, Ihr Betrieb – nicht ein Raster, das tausend andere genauso benutzen.\n\nDas ist der ganze Unterschied.\n\n#handwerk #handwerksbetrieb #webdesign #dachdecker #elektriker #sanitärheizung #malerbetrieb #pforzheim",
+      "facebook": "Gebaut für Sie. Nicht für alle.\n\nEine Vorlage ist so konstruiert, dass sie zu möglichst vielen Betrieben passt – und genau deshalb passt sie zu keinem wirklich gut. Sie ist ein Kompromiss, bevor Sie überhaupt ein Wort eingegeben haben.\n\nEine entwickelte Website fängt andersherum an: bei Ihnen. Ihren Farben, Ihrer Sprache, Ihren echten Projekten – nicht bei einem Raster, das tausend andere Betriebe genauso benutzen.\n\nDas ist der ganze Unterschied zwischen einer Website, die „auch irgendwie passt\", und einer, die aussieht, als gäbe es Sie nur einmal. Weil das stimmt.\n\nbuchalik-websites.com",
+      "linkedin": "Gebaut für Sie. Nicht für alle.\n\nEine Vorlage muss, damit sie sich verkauft, zu möglichst vielen unterschiedlichen Betrieben passen. Genau darin liegt ihr grundlegendes Problem: Was für alle passt, passt für niemanden wirklich gut. Es ist ein Kompromiss, eingebaut, bevor überhaupt ein Wort über Ihren Betrieb eingegeben wurde.\n\nEine entwickelte Website beginnt am anderen Ende: bei Ihnen. Bei der Frage, was Ihren Betrieb von den anderen zehn Handwerksbetrieben in der Umgebung unterscheidet – und wie man das online sichtbar macht, statt es hinter einem austauschbaren Layout zu verstecken.\n\nDer Unterschied zeigt sich selten auf den ersten Blick. Er zeigt sich, wenn ein potenzieller Kunde zwei Websites nebeneinander öffnet und bei der einen sofort weiß, mit wem er es zu tun hat – und bei der anderen nicht.\n\nGenau das ist der Grund, warum ich keine Vorlagen verwende.\n\nbuchalik-websites.com"
+    }
+  },
+  {
     "id": "post-08-plan-vor-rechnung",
     "variant": "foto",
     "photo": "assets/photos/post-08-plan.jpg",

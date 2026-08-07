@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+{{FONTS_CSS}}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  src: url(data:font/ttf;base64,{{INTER_800}}) format('truetype');
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+.canvas {
+  position: relative; overflow: hidden;
+  width: 1200px; height: 630px;
+  background: #000000;
+  font-family: 'Inter', sans-serif;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+}
+
+.kicker {
+  margin: 0 0 26px;
+  font: 600 14px/1 'Inter', sans-serif;
+  letter-spacing: 0.32em; text-transform: uppercase;
+  color: rgba(245,245,247,0.42);
+}
+
+.headline {
+  margin: 0; padding: 0 90px; text-align: center;
+  font-family: 'Inter', sans-serif; font-weight: 800;
+  font-size: 68px; line-height: 1.08;
+  letter-spacing: -0.03em;
+  color: #F5F5F7;
+}
+.headline em { font-style: normal; color: #E8C875; }
+
+.subtitle {
+  margin: 26px 0 0; padding: 0 160px; text-align: center;
+  font: 400 20px/1.5 'Inter', sans-serif;
+  letter-spacing: -0.005em;
+  color: #86868B;
+}
+
+.footer-mark {
+  position: absolute; left: 0; right: 0; bottom: 40px;
+  display: flex; align-items: center; justify-content: center;
+}
+.footer-mark .wordmark {
+  font: 600 12px/1 'Inter', sans-serif;
+  letter-spacing: 0.24em; text-transform: uppercase;
+  color: rgba(245,245,247,0.3);
+}
+</style>
+</head>
+<body>
+<div class="canvas">
+  <p class="kicker">{{KICKER}}</p>
+  <p class="headline">{{HEADLINE}}</p>
+  <p class="subtitle">{{SUBTITLE}}</p>
+  <div class="footer-mark">
+    <span class="wordmark">Buchalik Digital</span>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+{{FONTS_CSS}}
+
+/* Extra weight lives here, not in the shared _fonts.css — see nacht/ig.html
+   for why: a global 800 face would silently re-render every other template
+   that happens to touch that weight. */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  src: url(data:font/ttf;base64,{{INTER_800}}) format('truetype');
+}
+
+/* Deliberately a third visual world, after the dark-gold glass brand look
+   and the cold "nacht" scene: Apple's own restraint — pure black, one
+   enormous fragment-sentence headline, one calm line of explanation, almost
+   nothing else. The gold accent on one phrase is the only thing tying it
+   back to the brand; everything else is negative space. */
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+.canvas {
+  position: relative; overflow: hidden;
+  width: 1080px; height: 1080px;
+  background: #000000;
+  font-family: 'Inter', sans-serif;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+}
+
+.kicker {
+  margin: 0 0 40px;
+  font: 600 17px/1 'Inter', sans-serif;
+  letter-spacing: 0.34em; text-transform: uppercase;
+  color: rgba(245,245,247,0.42);
+}
+
+.headline {
+  margin: 0; padding: 0 90px; text-align: center;
+  font-family: 'Inter', sans-serif; font-weight: 800;
+  font-size: 108px; line-height: 1.06;
+  letter-spacing: -0.03em;
+  color: #F5F5F7;
+}
+.headline em { font-style: normal; color: #E8C875; }
+
+.subtitle {
+  margin: 44px 0 0; padding: 0 130px; text-align: center;
+  font: 400 26px/1.5 'Inter', sans-serif;
+  letter-spacing: -0.005em;
+  color: #86868B;
+}
+
+.footer-mark {
+  position: absolute; left: 0; right: 0; bottom: 64px;
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+}
+.footer-mark .wordmark {
+  font: 600 13px/1 'Inter', sans-serif;
+  letter-spacing: 0.26em; text-transform: uppercase;
+  color: rgba(245,245,247,0.3);
+}
+</style>
+</head>
+<body>
+<div class="canvas">
+  <p class="kicker">{{KICKER}}</p>
+  <p class="headline">{{HEADLINE}}</p>
+  <p class="subtitle">{{SUBTITLE}}</p>
+  <div class="footer-mark">
+    <span class="wordmark">Buchalik Digital</span>
+  </div>
+</div>
+</body>
+</html>
