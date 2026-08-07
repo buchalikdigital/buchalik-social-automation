@@ -5,7 +5,11 @@
     "fields": {
       "HEADLINE": "Eine E-Mail an mich.<br><em>Keine Weiterleitung.</em>"
     },
-    "posted": { "instagram": false, "facebook": false, "linkedin": false },
+    "posted": {
+      "instagram": false,
+      "facebook": false,
+      "linkedin": true
+    },
     "captions": {
       "instagram": "Bei einer Agentur schreiben Sie eine E-Mail und warten. Vielleicht antwortet der Projektleiter, vielleicht jemand anderes, vielleicht dauert es drei Tage.\n\nBei mir schreiben Sie mir. Direkt. Keine Weiterleitung, kein Ticket, kein „Ihr Anliegen wurde an das zuständige Team übergeben.\"\n\nEin Ein-Personen-Betrieb hat einen Nachteil weniger, als man denkt: Es gibt niemanden, an den man Sie abschieben kann.\n\n#handwerk #handwerksbetrieb #webdesign #dachdecker #elektriker #sanitärheizung #pforzheim",
       "facebook": "Bei einer Agentur schreiben Sie eine E-Mail und warten. Vielleicht antwortet der Projektleiter, vielleicht ein Kollege, vielleicht dauert es drei Tage – je nachdem, wer gerade Zeit hat.\n\nBei mir schreiben Sie mir. Direkt. Keine Weiterleitung, kein Ticketsystem, keine Standardantwort „Ihr Anliegen wurde an das zuständige Team übergeben.\"\n\nEin Ein-Personen-Betrieb hat einen Nachteil weniger, als man zunächst denkt: Es gibt niemanden, an den man Sie abschieben kann. Ich baue Ihre Website, ich betreue sie danach, und ich bin derjenige, der antwortet.\n\nFragen zu Ihrer Website? Einfach schreiben.\nbuchalik-websites.com",
@@ -20,7 +24,11 @@
       "HEADLINE": "Einfach.<br><em>Das war die harte Arbeit.</em>",
       "SUBTITLE": "Jede Website, die mühelos wirkt, hat vorher jemanden viel Mühe gekostet."
     },
-    "posted": { "instagram": false, "facebook": false, "linkedin": false },
+    "posted": {
+      "instagram": false,
+      "facebook": false,
+      "linkedin": false
+    },
     "captions": {
       "instagram": "Einfach. Das war die harte Arbeit.\n\nJede Website, die mühelos wirkt, hat vorher jemanden viel Mühe gekostet.\n\nEin Baukasten spart Ihnen diese Mühe – und das sieht man ihr an. Zu viele Elemente, zu viel Text, kein klarer Fokus.\n\nGute Gestaltung ist nicht das, was man hinzufügt. Es ist das, was man wegzulassen wagt.\n\n#handwerk #handwerksbetrieb #webdesign #design #dachdecker #malerbetrieb #pforzheim",
       "facebook": "Einfach. Das war die harte Arbeit.\n\nJede Website, die mühelos wirkt, hat vorher jemanden viel Mühe gekostet. Was am Ende simpel aussieht, ist meistens das Ergebnis von zehn verworfenen Versionen, nicht der ersten Idee.\n\nEin Baukasten spart sich diese Mühe – und das sieht man ihm an. Zu viele Elemente auf einmal, zu viel Text, kein klarer Fokus, weil niemand die Zeit hatte, etwas wegzulassen.\n\nGute Gestaltung ist nicht das, was man hinzufügt. Es ist das, was man bewusst weglässt – und genau dafür nehme ich mir bei jeder Website die Zeit.\n\nbuchalik-websites.com",
@@ -35,7 +43,11 @@
       "HEADLINE": "Zwei Wochen.<br><em>Nicht zwei Monate.</em>",
       "SUBTITLE": "Kostenloser Entwurf zuerst, Umsetzung danach — ohne endlose Abstimmungsschleifen."
     },
-    "posted": { "instagram": false, "facebook": false, "linkedin": false },
+    "posted": {
+      "instagram": false,
+      "facebook": false,
+      "linkedin": false
+    },
     "captions": {
       "instagram": "Zwei Wochen. Nicht zwei Monate.\n\nKostenloser Entwurf zuerst. Sie sehen Ihre Website, bevor Sie sich entscheiden.\n\nDanach: Umsetzung in 1–2 Wochen, nicht in einem Prozess, der sich über Monate zieht, weil zehn Personen mitreden müssen.\n\nEine Person, ein Ansprechpartner, ein klarer Zeitplan.\n\n#handwerk #handwerksbetrieb #webdesign #dachdecker #elektriker #sanitärheizung #pforzheim",
       "facebook": "Zwei Wochen. Nicht zwei Monate.\n\nBei den meisten Agenturprojekten vergeht mehr Zeit mit Abstimmung als mit tatsächlicher Arbeit – Kickoff-Meeting, Konzeptpräsentation, zwei Feedbackrunden, Freigabeschleifen. Am Ende dauert ein Projekt drei Monate, obwohl die eigentliche Arbeit vielleicht zwei Wochen gebraucht hätte.\n\nBei mir gibt es nur einen Ansprechpartner: mich. Kostenloser Entwurf zuerst, damit Sie sehen, was Sie bekommen. Passt er, folgt die Umsetzung in 1–2 Wochen – ohne Warteschleifen, weil noch jemand anderes zustimmen muss.\n\nKürzer bedeutet hier nicht schlechter. Es bedeutet nur: kein unnötiger Umweg.\n\nbuchalik-websites.com",
@@ -50,7 +62,11 @@
       "HEADLINE": "Gebaut für Sie.<br><em>Nicht für alle.</em>",
       "SUBTITLE": "Eine Vorlage passt zu jedem ein bisschen. Eine entwickelte Website passt zu Ihnen genau."
     },
-    "posted": { "instagram": false, "facebook": false, "linkedin": false },
+    "posted": {
+      "instagram": false,
+      "facebook": false,
+      "linkedin": false
+    },
     "captions": {
       "instagram": "Gebaut für Sie. Nicht für alle.\n\nEine Vorlage passt zu jedem ein bisschen. Eine entwickelte Website passt zu Ihnen genau.\n\nIhre Farben, Ihre Sprache, Ihre Bilder, Ihr Betrieb – nicht ein Raster, das tausend andere genauso benutzen.\n\nDas ist der ganze Unterschied.\n\n#handwerk #handwerksbetrieb #webdesign #dachdecker #elektriker #sanitärheizung #malerbetrieb #pforzheim",
       "facebook": "Gebaut für Sie. Nicht für alle.\n\nEine Vorlage ist so konstruiert, dass sie zu möglichst vielen Betrieben passt – und genau deshalb passt sie zu keinem wirklich gut. Sie ist ein Kompromiss, bevor Sie überhaupt ein Wort eingegeben haben.\n\nEine entwickelte Website fängt andersherum an: bei Ihnen. Ihren Farben, Ihrer Sprache, Ihren echten Projekten – nicht bei einem Raster, das tausend andere Betriebe genauso benutzen.\n\nDas ist der ganze Unterschied zwischen einer Website, die „auch irgendwie passt\", und einer, die aussieht, als gäbe es Sie nur einmal. Weil das stimmt.\n\nbuchalik-websites.com",
