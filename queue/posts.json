@@ -1,5 +1,18 @@
 [
   {
+    "id": "post-14-persoenlicher-ansprechpartner",
+    "variant": "headline",
+    "fields": {
+      "HEADLINE": "Eine E-Mail an mich.<br><em>Keine Weiterleitung.</em>"
+    },
+    "posted": { "instagram": false, "facebook": false, "linkedin": false },
+    "captions": {
+      "instagram": "Bei einer Agentur schreiben Sie eine E-Mail und warten. Vielleicht antwortet der Projektleiter, vielleicht jemand anderes, vielleicht dauert es drei Tage.\n\nBei mir schreiben Sie mir. Direkt. Keine Weiterleitung, kein Ticket, kein „Ihr Anliegen wurde an das zuständige Team übergeben.\"\n\nEin Ein-Personen-Betrieb hat einen Nachteil weniger, als man denkt: Es gibt niemanden, an den man Sie abschieben kann.\n\n#handwerk #handwerksbetrieb #webdesign #dachdecker #elektriker #sanitärheizung #pforzheim",
+      "facebook": "Bei einer Agentur schreiben Sie eine E-Mail und warten. Vielleicht antwortet der Projektleiter, vielleicht ein Kollege, vielleicht dauert es drei Tage – je nachdem, wer gerade Zeit hat.\n\nBei mir schreiben Sie mir. Direkt. Keine Weiterleitung, kein Ticketsystem, keine Standardantwort „Ihr Anliegen wurde an das zuständige Team übergeben.\"\n\nEin Ein-Personen-Betrieb hat einen Nachteil weniger, als man zunächst denkt: Es gibt niemanden, an den man Sie abschieben kann. Ich baue Ihre Website, ich betreue sie danach, und ich bin derjenige, der antwortet.\n\nFragen zu Ihrer Website? Einfach schreiben.\nbuchalik-websites.com",
+      "linkedin": "Bei einer Agentur schreiben Sie eine E-Mail und warten. Vielleicht antwortet der Projektleiter, vielleicht ein anderer Ansprechpartner aus dem Team, vielleicht dauert es drei Tage – je nachdem, wer gerade Kapazität hat und wie die interne Zuständigkeit gerade verteilt ist.\n\nBei mir schreiben Sie mir. Direkt. Keine Weiterleitung, kein Ticketsystem, keine Antwort, die mit „Ihr Anliegen wurde an das zuständige Team übergeben\" beginnt.\n\nEin Ein-Personen-Betrieb hat einen strukturellen Nachteil weniger, als man zunächst annimmt: Es gibt niemanden, an den man Sie abschieben kann. Ich entwerfe Ihre Website, ich setze sie um, und ich bin auch danach derjenige, der Ihre Nachricht liest und antwortet – nicht ein Postfach, das mehrere Kunden gleichzeitig verwaltet.\n\nGenau das ist im Kleinen der Unterschied zwischen \"betreut werden\" und \"persönlich betreut werden\".\n\nbuchalik-websites.com"
+    }
+  },
+  {
     "id": "post-11-einfach",
     "variant": "apple",
     "fields": {
